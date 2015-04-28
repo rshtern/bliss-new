@@ -24,6 +24,11 @@
         'line-height': viewport.width / 22 + 'px'
     });
 
+    	var servicesCol = $('.services-row>.col.s4');
+	var setColHeight = servicesCol.eq(0).height();
+	servicesCol.eq(1).css('height', setColHeight+'px');
+	servicesCol.eq(2).css('height', setColHeight+'px');
+
     $(window).resize(function() {
         viewport = {
             height: $(window).height(),
@@ -37,6 +42,8 @@
             'font-size': viewport.width / 18 + 'px',
             'line-height': viewport.width / 17 + 'px'
         });
+		servicesCol.eq(1).css('height', setColHeight+'px');
+		servicesCol.eq(2).css('height', setColHeight+'px');
     });
     $(window).scroll(function() {
         if ($(this).scrollTop() > viewport.height / 4) {
@@ -67,38 +74,42 @@
             $('.scroll-down').css('opacity', '1');
         }
     });
+	
 
-    // var AnimatedHeader = (function() {
+	/****************************************************/
+	/*         header shrinking when scrolling         */
+	/****************************************************/
+     var AnimatedHeader = (function() {
 
-    // 	var elem = document.documentElement,
-    // 		header = $( 'header' ),
-    // 		didScroll = false,
-    // 		changeHeaderOn = 300;
+     	var elem = document.documentElement,
+    		header = $( 'header' ),
+    		didScroll = false,
+    		changeHeaderOn = viewport.height/3.25;
 
-    // 	function init() {
-    // 		window.addEventListener( 'scroll', function( event ) {
-    // 			if( !didScroll ) {
-    // 				didScroll = true;
-    // 				setTimeout( scrollPage, 250 );
-    // 			}
-    // 		}, false );
-    // 	}
+    	function init() {
+    		window.addEventListener( 'scroll', function( event ) {
+    			if( !didScroll ) {
+    				didScroll = true;
+    				setTimeout( scrollPage, 250 );
+    			}
+    		}, false );
+    	}
 
-    // 	function scrollPage() {
-    // 		var scroll_y = scrollY();
-    // 		if ( scroll_y >= changeHeaderOn ) {
-    // 			header.addClass('header-small');
-    // 		}
-    // 		else {
-    // 			header.removeClass('header-small');
-    // 		}
-    // 		didScroll = false;
-    // 	}
+    	function scrollPage() {
+    		var scroll_y = scrollY();
+    		if ( scroll_y >= changeHeaderOn ) {
+    			header.addClass('fixed-nav');
+    		}
+    		else {
+    			header.removeClass('fixed-nav');
+    		}
+    		didScroll = false;
+    	}
 
-    // 	function scrollY() {
-    // 		return window.pageYOffset || elem.scrollTop;
-    // 	}
+    	function scrollY() {
+    		return window.pageYOffset || elem.scrollTop;
+    	}
 
-    // 	init();
-    // }());
+    	init();
+    }());
 }());
