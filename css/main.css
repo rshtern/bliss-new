@@ -1126,7 +1126,7 @@ img.fadeOut:hover {
 .gallery figure figcaption::before, .gallery figure figcaption::after {
     pointer-events: none;
 }
-.gallery figure figcaption, .gallery figure figcaption > a {
+.gallery figure figcaption, .gallery figure figcaption > a.roxy {
     position: absolute;
     top: 0;
     left: 0;
@@ -1143,6 +1143,7 @@ img.fadeOut:hover {
     font-size: 0;
     opacity: 0;
 }
+
 .gallery figure h2, .gallery figure p {
     margin: 0;
 }
@@ -1226,13 +1227,142 @@ figure.effect-roxy p {
     -webkit-transform: translate3d(0, -5px, 0);
     transform: translate3d(0, -5px, 0);
 }
-figure.effect-roxy:hover img {
+figure.effect-roxy:hover img.thumb {
     opacity: 0;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
-figure.effect-roxy:hover figcaption::before, figure.effect-roxy:hover p, figure.effect-roxy:hover h2 {
+
+figure.effect-roxy:hover figcaption::before, 
+figure.effect-roxy:hover p, 
+figure.effect-roxy:hover h2 {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
+/******************************/
+/*  lightbox overlay gallery  */
+/******************************/
+
+.overlay{
+	width: 0px;
+	height: 0px;
+	position: fixed;
+	overflow: hidden;
+	left: 0px;
+	top: 0px;
+	padding: 0px;
+	z-index: 1000;
+	text-align: center;
+	background: rgb(0,0,0);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0, 0.85) 0%, rgba(0,0,0,1) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0, 0.85)), color-stop(100%,rgba(0,0,0,1)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0, 0.85) 0%,rgba(0,0,0,1) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0, 0.85) 0%,rgba(0,0,0,1) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0, 0.85) 0%,rgba(0,0,0,1) 100%);
+	background: radial-gradient(center, ellipse cover, rgba(0,0,0, 0.85) 0%,rgba(0,0,0,1) 100%);
+}
+.overlay > div{
+	position: relative;
+	color: rgba(27,54,81,0.8);
+	width: 550px;
+	height: 80px;
+	margin: 40px auto 0px auto;
+	text-shadow: 0px 1px 1px rgba(255,255,255,0.6);
+}
+.overlay div h3,
+.overlay div p{
+	padding: 0px 20px;
+	width: 200px;
+	height: 60px;
+}
+.overlay div h3{
+	font-size: 36px;
+	float: left;
+	text-align: right;
+	border-right: 1px solid rgba(27,54,81,0.4);
+}
+
+.overlay a.close{
+	background: rgba(27,54,81,0.8);
+	z-index: 1001;
+	color: #fff;
+	position: absolute;
+	bottom: 8px;
+	left: 10%;
+	font-size: 15px;
+	line-height: 26px;
+	text-align: center;
+	width: 50px;
+	height: 23px;
+	overflow: hidden;
+	/*margin-left: -25px;*/
+	opacity: 0;
+	filter: alpha(opacity=0); /* internet explorer */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=0)"; /*IE8*/
+	-webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+	-moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+}
+section.gallery .overlay > img{
+	height: 80%; /*For Opera max-height does not seem to work*/ 
+	min-height: 80%;
+	max-height: 80%;
+	margin-top: 5%;
+	position: relative;
+	opacity: 0;
+	display: inline-block;
+	filter: alpha(opacity=0); /* internet explorer */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=0)"; /*IE8*/
+	-webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+	-moz-box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+	box-shadow: 0px 2px 7px rgba(0,0,0,0.2);
+	-webkit-transition: opacity 0.25s ease;
+	-moz-transition: opacity 0.25s ease;
+	-o-transition: opacity 0.25s ease;
+	-ms-transition: opacity 0.25s ease;
+	transition: opacity 0.25s ease;
+}
+.prev, .next{
+	/*text-indent: -9000px;*/
+	position: absolute;
+	top: -32px;
+	width: 24px;
+	height: 25px;
+	left: 50%;
+	opacity: 0.8;
+	z-index: 9999;
+	filter: alpha(opacity=80); /* internet explorer */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=80)"; /*IE8*/
+}
+.prev:hover, .next:hover{
+	opacity: 1;
+	filter: alpha(opacity=99); /* internet explorer */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=99)"; /*IE8*/
+}
+.prev{
+	right: 54%;
+	background: transparent url(../images/arrows.png) no-repeat top left;
+}
+.next{
+	left:54%;
+	background: transparent url(../images/arrows.png) no-repeat top right;
+}
+section.gallery .overlay:target {
+	width: auto;
+	height: auto;
+	bottom: 0px;
+	right: 0px;
+}
+section.gallery .overlay:target img,
+section.gallery .overlay:target a.close{
+	opacity: 1;
+	filter: alpha(opacity=99); /* internet explorer */
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=99)"; /*IE8*/
+}
+/* 
+	100% Height for Opera as the max-height seems to be ignored, not optimal for large screens 
+	http://bricss.net/post/11230266445/css-hack-to-target-opera 
+*/
+x:-o-prefocus, section.gallery .overlay img {
+    height: 100%;
