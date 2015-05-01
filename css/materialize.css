@@ -5065,7 +5065,7 @@ nav {
       padding: 0; }
   nav ul {
     margin: 0; }
-    nav ul li {
+    /*nav ul li {
       -webkit-transition: background-color .3s;
       -moz-transition: background-color .3s;
       -o-transition: background-color .3s;
@@ -5074,7 +5074,18 @@ nav {
       float: left;
       padding: 0; }
       nav ul li:hover, nav ul li.active {
-        background-color: rgba(0, 0, 0, 0.1); }
+        background-color: rgba(0, 0, 0, 0.1); }*/
+        nav ul{
+  -webkit-transition: border .3s;
+  -moz-transition: border .3s;
+  -o-transition: border .3s;
+  -ms-transition: border .3s;
+  transition: border .3s;
+}
+nav ul li:hover, nav ul li.active {
+        background-color: none;
+        border-bottom: inset 2px solid red; 
+}
     nav ul a {
       font-size: 1rem;
       color: #fff;

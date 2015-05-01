@@ -97,7 +97,8 @@
 
 @font-face {
     font-family: 'Open Sans Hebrew';
-    src: url("../font/OpenSansHebrew-Light.ttf") format("truetype");
+    src: url('../font/OpenSansHebrew-Light.eot');
+    src: url('../font/OpenSansHebrew-Light.eot?#iefix') format('embedded-opentype'), url('../font/OpenSansHebrew-Light.woff') format('woff'), url('../font/OpenSansHebrew-Light.ttf') format('truetype'), url('../font/OpenSansHebrew-Light.svg#OpenSansHebrew-Light') format('svg');
     font-weight: 300;
     font-style: normal;
 }
@@ -115,7 +116,8 @@
 
 @font-face {
     font-family: 'Open Sans Hebrew';
-    src: url("../font/OpenSansHebrew-Regular.ttf") format("truetype");
+    src: url('../font/OpenSansHebrew-Regular.eot');
+    src: url('../font/OpenSansHebrew-Regular.eot?#iefix') format('embedded-opentype'), url('../font/OpenSansHebrew-Regular.woff') format('woff'), url('../font/OpenSansHebrew-Regular.ttf') format('truetype'), url('../font/OpenSansHebrew-Regular.svg#OpenSansHebrew-Regular') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -148,6 +150,8 @@
 @font-face {
     font-family: 'Open Sans Hebrew';
     src: url("../font/OpenSansHebrew-Bold.ttf") format("truetype");
+    src: url('../font/OpenSansHebrew-Bold.eot');
+    src: url('../font/OpenSansHebrew-Bold.eot?#iefix') format('embedded-opentype'), url('../font/OpenSansHebrew-Bold.woff') format('woff'), url('../font/OpenSansHebrew-Bold.ttf') format('truetype'), url('../font/OpenSansHebrew-Bold.svg#OpenSansHebrew-Bold') format('svg');
     font-weight: bold;
     font-style: normal;
 }
@@ -207,12 +211,23 @@
     font-weight: 400;
     font-style: bold;
 }
+/* Big Jhon Font */
+/* BEGIN Big Jhon */
+
+@font-face {
+    font-family: 'Big Jhon';
+    src: url('../font/BIG-JOHN.eot');
+    src: url('../font/BIG-JOHN.eot?#iefix') format('embedded-opentype'), url('../font/BIG-JOHN.woff') format('woff'), url('../font/BIG-JOHN.ttf') format('truetype'), url('../font/BIG-JOHN.svg#BIG-JOHN') format('svg');
+    font-weight: 400;
+    font-style: bold;
+}
 /* END Big Jhon */
 /* BEGIN Slim Joe */
 
 @font-face {
     font-family: 'Slim Joe';
-    src: url("../font/Slim-Joe.otf") format("opentype");
+    src: url('../font/Slim-Joe.eot');
+    src: url('../font/Slim-Joe.eot?#iefix') format('embedded-opentype'), url('../font/Slim-Joe.woff') format('woff'), url('../font/Slim-Joe.ttf') format('truetype'), url('../font/Slim-Joe.svg#Slim-Joe') format('svg');
     font-weight: 300;
     font-style: normal;
 }
@@ -232,35 +247,40 @@
 
 @font-face {
     font-family: 'Nexa-Rust-Extras';
-    src: url("../font/NexaRustExtras-Free.otf") format("opentype");
+    src: url('../font/NexaRustExtras-Free.eot');
+    src: url('../font/NexaRustExtras-Free.eot?#iefix') format('embedded-opentype'), url('../font/NexaRustExtras-Free.woff') format('woff'), url('../font/NexaRustExtras-Free.ttf') format('truetype'), url('../font/NexaRustExtras-Free.svg#NexaRustExtras-Free') format('svg');
 }
 /* END Nexa Rust Extras */
 /* BEGIN Nexa Rust Handmade Extended */
 
 @font-face {
     font-family: 'Nexa-Rust-Handmade-Extended';
-    src: url("../font/NexaRustHandmade-Extended.otf") format("opentype");
+    src: url('../font/NexaRustHandmade-Extended.eot');
+    src: url('../font/NexaRustHandmade-Extended.eot?#iefix') format('embedded-opentype'), url('../font/NexaRustHandmade-Extended.woff') format('woff'), url('../font/NexaRustHandmade-Extended.ttf') format('truetype'), url('../font/NexaRustHandmade-Extended.svg#NexaRustHandmade-Extended') format('svg');
 }
 /* END Nexa Rust Extras Extended */
 /* BEGIN Nexa Rust Sans Black */
 
 @font-face {
     font-family: 'Nexa-Rust-Sans-Black';
-    src: url("../font/NexaRustSans-Black.otf") format("opentype");
+    src: url('../font/NexaRustSans-Black.eot');
+    src: url('../font/NexaRustSans-Black.eot?#iefix') format('embedded-opentype'), url('../font/NexaRustSans-Black.woff') format('woff'), url('../font/NexaRustSans-Black.ttf') format('truetype'), url('../font/NexaRustSans-Black.svg#NexaRustSans-Black') format('svg');
 }
 /* END Nexa Rust Sans Black */
 /* BEGIN Nexa Rust Sans Script */
 
 @font-face {
     font-family: 'Nexa-Rust-Sans-Script';
-    src: url("../font/NexaRustScriptL-0.otf") format("opentype");
+    src: url('../font/NexaRustScriptL-0.eot');
+    src: url('../font/NexaRustScriptL-0.eot?#iefix') format('embedded-opentype'), url('../font/NexaRustScriptL-0.woff') format('woff'), url('../font/NexaRustScriptL-0.ttf') format('truetype'), url('../font/NexaRustScriptL-0.svg#NexaRustScriptL-0') format('svg');
 }
 /* END Nexa Rust Sans Script */
 /* BEGIN Nexa Rust Sans Black Shadow */
 
 @font-face {
     font-family: 'Nexa-Rust-Sans-Black-Shadow';
-    src: url("../font/NexaRustSlab-BlackShadow01.otf") format("opentype");
+    src: url('../font/NexaRustSlab-BlackShadow01.eot');
+    src: url('../font/NexaRustSlab-BlackShadow01.eot?#iefix') format('embedded-opentype'), url('../font/NexaRustSlab-BlackShadow01.woff') format('woff'), url('../font/NexaRustSlab-BlackShadow01.ttf') format('truetype'), url('../font/NexaRustSlab-BlackShadow01.svg#NexaRustSlab-BlackShadow01') format('svg');
 }
 /* END Nexa Rust Sans Black Shadow */
 /*******************/
@@ -301,6 +321,21 @@
 }
 .icon-sun:before {
     content: "\e604";
+}
+.icon-angle-down:before {
+    content: "\e608";
+}
+.icon-close:before {
+    content: "\f00d";
+}
+.icon-chevron-left:before {
+    content: "\f053";
+}
+.icon-chevron-right:before {
+    content: "\f054";
+}
+.icon-envelope-o:before {
+    content: "\f003";
 }
 /*******************/
 /*   main styles   */
@@ -343,8 +378,8 @@ h2.about-header, h2.services-header, h2.clients-header, h2.contact-header {
     line-height: 2em;
     margin: 0 0 0.45em;
 }
-h2.clients-header{
-	margin-bottom: 1.25em;	
+h2.clients-header {
+    margin-bottom: 1.25em;
 }
 h2.about-header > em, h2.services-header > em, h2.clients-header > em {
     font-family: 'Courgette Regular';
@@ -449,6 +484,18 @@ section.hero {
     background-size: cover;
     background-attachment: fixed;
 }
+section.hero nav ul li {
+    -webkit-transition: all .25s;
+    -moz-transition: all .25s;
+    -o-transition: all .25s;
+    -ms-transition: all .25s;
+    transition: all .25s;
+}
+section.hero nav ul li:hover, section.hero nav ul li.active {
+    border-bottom: inset -2px solid #ee5f5f;
+    box-shadow: inset 0 -4px 0 0 #ee5f5f;
+    background: none;
+}
 nav {
     height: 6.5em;
     line-height: 6.5em;
@@ -458,10 +505,11 @@ nav {
     right: 17%;
     background: none;
     box-shadow: none;
-    -webkit-transition: all 0.4s ease-in;
-    -moz-transition: all 0.4s ease-in;
-    -o-transition: all 0.4s ease-in;
-    transition: all 0.4s ease-in;
+    -webkit-transition: all 0.5s ease-in;
+    -moz-transition: all 0.5s ease-in;
+    -o-transition: all 0.5s ease-in;
+    -ms-transition: all 0.5s ease-in;
+    transition: all 0.5s ease-in;
 }
 .logo {
     width: 110px;
@@ -521,29 +569,33 @@ header.fixed-nav>nav a {
     left: 0;
     right: 0;
     z-index: 1;
+    font-size: 1.75em;
 }
 section.about {
     background: #fff;
     position: relative;
     z-index: 9;
+    height: 950px;
+    /* for full hd screens */
 }
 .about-left {
     background: #ee5f5f;
     width: 40%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
+    position: static;
     padding: 5% 0;
+    display: table-cell;
+    vertical-align: middle;
+    height: inherit;
 }
 .about-right {
     margin: 0 auto;
     width: 60%;
-    padding: 5% 10%;
+    padding: 5% 12%;
+    position: absolute;
 }
 .about-row {
     margin-bottom: 0;
-    padding-bottom: 20px;
+    padding-bottom: 0;
 }
 .icon-green {
     color: #34d475;
@@ -562,6 +614,8 @@ section.services {
     z-index: 9;
     background: #f5f5f5;
     padding: 5%;
+    display: table-cell;
+    vertical-align: middle;
 }
 .services-row {
     margin: 4em 0 0;
@@ -576,21 +630,27 @@ section.services {
     display: table-cell;
     position: relative;
 }
-
-.set-bottom{
-	position: absolute;
-	bottom: 0;
-	margin-bottom: 0;
+.set-bottom {
+    position: absolute;
+    bottom: 0;
+    margin-bottom: 0;
 }
 section.clients {
     position: relative;
     z-index: 9;
     padding: 5%;
+    display: table-cell;
+    vertical-align: middle;
 }
 section.contact {
     color: #fff;
     background: #00b08c;
     padding: 5%;
+    min-height: 800px;
+    /* for full hd screens */
+    
+    position: relative;
+    z-index: 10;
 }
 .contact-box {
     max-width: 620px;
@@ -599,9 +659,9 @@ section.contact {
     text-align: left;
     position: relative;
     z-index: 9;
-          -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .contact-box.form-input {
     height: 70px;
@@ -635,7 +695,10 @@ section.contact {
     text-align: right;
     direction: ltr;
     padding-right: 10px;
-    margin-bottom: 15px 0 0;
+    /*margin-bottom: 15px 0 0;*/
+      position: relative;
+  top: 0px;
+  line-height: 1em;
 }
 .contact ul {
     display: block;
@@ -653,6 +716,7 @@ footer.page-footer {
     position: relative;
     margin: 0;
     padding: 0;
+    z-index: 10;
 }
 footer.page-footer p {
     position: absolute;
@@ -901,8 +965,8 @@ input.send-button {
 .bounce {
     animation-name: bounce;
     -webkit-animation-name: bounce;
-    animation-duration: 1s;
-    -webkit-animation-duration: 1s;
+    animation-duration: 2s;
+    -webkit-animation-duration: 2s;
     animation-timing-function: ease;
     -webkit-animation-timing-function: ease;
     animation-iteration-count: infinite;
@@ -1036,11 +1100,10 @@ img.fadeOut:hover {
     display: block;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-
     border-radius: 50%;
-      -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .icon-facebook:before {
     content: "\e605";
@@ -1095,6 +1158,7 @@ img.fadeOut:hover {
     width: 100%;
     list-style: none;
     text-align: center;
+    z-index: 10;
 }
 /* Common style */
 
@@ -1143,7 +1207,6 @@ img.fadeOut:hover {
     font-size: 0;
     opacity: 0;
 }
-
 .gallery figure h2, .gallery figure p {
     margin: 0;
 }
@@ -1195,6 +1258,7 @@ figure.effect-roxy figcaption::before {
     content: '';
     opacity: 0;
     /*box-shadow: -1px 2px 2px rgba(33, 33, 33, 1);*/
+    
     -webkit-transition: opacity 1s, -webkit-transform 1s;
     transition: opacity 1s, transform 1s;
     -webkit-transform: scale(1.025);
@@ -1218,6 +1282,7 @@ figure.effect-roxy h2 {
 }
 figure.effect-roxy p {
     /*background: rgba(255, 255, 255, 0.9);*/
+    
     color: #fff;
     opacity: 0;
     text-align: center;
@@ -1232,10 +1297,7 @@ figure.effect-roxy:hover img.thumb {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
-
-figure.effect-roxy:hover figcaption::before, 
-figure.effect-roxy:hover p, 
-figure.effect-roxy:hover h2 {
+figure.effect-roxy:hover figcaption::before, figure.effect-roxy:hover p, figure.effect-roxy:hover h2 {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -1244,125 +1306,309 @@ figure.effect-roxy:hover h2 {
 /*  lightbox overlay gallery  */
 /******************************/
 
-.overlay{
-	width: 0px;
-	height: 0px;
-	position: fixed;
-	overflow: hidden;
-	left: 0px;
-	top: 0px;
-	padding: 0px;
-	z-index: 1000;
-	text-align: center;
-	background: rgb(0,0,0);
-	background: -moz-radial-gradient(center, ellipse cover, rgba(0,0,0, 0.85) 0%, rgba(0,0,0,1) 100%);
-	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(0,0,0, 0.85)), color-stop(100%,rgba(0,0,0,1)));
-	background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0, 0.85) 0%,rgba(0,0,0,1) 100%);
-	background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0, 0.85) 0%,rgba(0,0,0,1) 100%);
-	background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0, 0.85) 0%,rgba(0,0,0,1) 100%);
-	background: radial-gradient(center, ellipse cover, rgba(0,0,0, 0.85) 0%,rgba(0,0,0,1) 100%);
+.overlay {
+    width: 0px;
+    height: 0px;
+    position: fixed;
+    overflow: hidden;
+    left: 0px;
+    top: 0px;
+    padding: 0px;
+    z-index: 1000;
+    text-align: center;
+    background: rgb(0, 0, 0);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 1) 100%);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(0, 0, 0, 0.85)), color-stop(100%, rgba(0, 0, 0, 1)));
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 1) 100%);
+    background: -o-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 1) 100%);
+    background: -ms-radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 1) 100%);
+    background: radial-gradient(center, ellipse cover, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 1) 100%);
 }
-.overlay > div{
-	position: relative;
-	color: rgba(27,54,81,0.8);
-	width: 550px;
-	height: 80px;
-	margin: 40px auto 0px auto;
-	text-shadow: 0px 1px 1px rgba(255,255,255,0.6);
+.overlay > div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 93%;
+    left: 0;
 }
-.overlay div h3,
-.overlay div p{
-	padding: 0px 20px;
-	width: 200px;
-	height: 60px;
+a.close {
+    z-index: 1001;
+    color: #fff;
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    margin-left: -20px;
+    font-size: 1.5em;
+    text-align: center;
+    width: 40px;
+    height: 40px;
+    line-height: 42px;
+    overflow: hidden;
+    opacity: 1;
+    filter: alpha(opacity=0);
+    /* internet explorer */
+    
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=0)";
+    /*IE8*/
+    
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.3);
 }
-.overlay div h3{
-	font-size: 36px;
-	float: left;
-	text-align: right;
-	border-right: 1px solid rgba(27,54,81,0.4);
+section.gallery .overlay > img {
+    height: 80%;
+    /*For Opera max-height does not seem to work*/
+    
+    min-height: 80%;
+    max-height: 80%;
+    margin-top: 5%;
+    position: relative;
+    opacity: 0;
+    display: inline-block;
+    filter: alpha(opacity=0);
+    /* internet explorer */
+    
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=0)";
+    /*IE8*/
+    
+    -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
+    -webkit-transition: opacity 0.25s ease;
+    -moz-transition: opacity 0.25s ease;
+    -o-transition: opacity 0.25s ease;
+    -ms-transition: opacity 0.25s ease;
+    transition: opacity 0.25s ease;
 }
-
-.overlay a.close{
-	background: rgba(27,54,81,0.8);
-	z-index: 1001;
-	color: #fff;
-	position: absolute;
-	bottom: 8px;
-	left: 10%;
-	font-size: 15px;
-	line-height: 26px;
-	text-align: center;
-	width: 50px;
-	height: 23px;
-	overflow: hidden;
-	/*margin-left: -25px;*/
-	opacity: 0;
-	filter: alpha(opacity=0); /* internet explorer */
-    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=0)"; /*IE8*/
-	-webkit-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
-	-moz-box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
-	box-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+.prev, .next {
+    position: absolute;
+    top: -63px;
+    width: 40px;
+    height: 40px;
+    left: 50%;
+    opacity: 1;
+    z-index: 9999;
+    font-size: 1.5em;
+    line-height: 44px;
+    filter: alpha(opacity=80);
+    /* internet explorer */
+    
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=80)";
+    /*IE8*/
 }
-section.gallery .overlay > img{
-	height: 80%; /*For Opera max-height does not seem to work*/ 
-	min-height: 80%;
-	max-height: 80%;
-	margin-top: 5%;
-	position: relative;
-	opacity: 0;
-	display: inline-block;
-	filter: alpha(opacity=0); /* internet explorer */
-    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=0)"; /*IE8*/
-	-webkit-box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
-	-moz-box-shadow: 1px 1px 4px rgba(0,0,0,0.3);
-	box-shadow: 0px 2px 7px rgba(0,0,0,0.2);
-	-webkit-transition: opacity 0.25s ease;
-	-moz-transition: opacity 0.25s ease;
-	-o-transition: opacity 0.25s ease;
-	-ms-transition: opacity 0.25s ease;
-	transition: opacity 0.25s ease;
+.prev:hover, .next:hover {
+    opacity: 1;
+    filter: alpha(opacity=99);
+    /* internet explorer */
+    
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=99)";
+    /*IE8*/
 }
-.prev, .next{
-	/*text-indent: -9000px;*/
-	position: absolute;
-	top: -32px;
-	width: 24px;
-	height: 25px;
-	left: 50%;
-	opacity: 0.8;
-	z-index: 9999;
-	filter: alpha(opacity=80); /* internet explorer */
-    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=80)"; /*IE8*/
+.prev {
+    left: 10%;
+    top: -20px;
+    bottom: 0;
+    padding-right: 4px;
 }
-.prev:hover, .next:hover{
-	opacity: 1;
-	filter: alpha(opacity=99); /* internet explorer */
-    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=99)"; /*IE8*/
-}
-.prev{
-	right: 54%;
-	background: transparent url(../images/arrows.png) no-repeat top left;
-}
-.next{
-	left:54%;
-	background: transparent url(../images/arrows.png) no-repeat top right;
+.next {
+    right: 10%;
+    top: -20px;
+    bottom: 0;
+    padding-left: 4px;
 }
 section.gallery .overlay:target {
-	width: auto;
-	height: auto;
-	bottom: 0px;
-	right: 0px;
+    width: auto;
+    height: auto;
+    bottom: 0px;
+    right: 0px;
 }
-section.gallery .overlay:target img,
-section.gallery .overlay:target a.close{
-	opacity: 1;
-	filter: alpha(opacity=99); /* internet explorer */
-    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(opacity=99)"; /*IE8*/
+section.gallery .overlay:target img, section.gallery .overlay:target a.close {
+    opacity: 1;
+    filter: alpha(opacity=99);
+    /* internet explorer */
+    
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(opacity=99)";
+    /*IE8*/
 }
 /* 
 	100% Height for Opera as the max-height seems to be ignored, not optimal for large screens 
 	http://bricss.net/post/11230266445/css-hack-to-target-opera 
 */
+
 x:-o-prefocus, section.gallery .overlay img {
     height: 100%;
+}
+form.contact-form {
+    width: 620px;
+    height: 85px;
+    display: block;
+    margin: 0 auto 1.5em;
+    position: relative;
+}
+.contact-form > p {
+	position: absolute;
+	bottom: -0.75em;
+	left: 0;
+}
+
+/********************************/
+/*     contact input effect     */
+/********************************/
+
+input[type=text] {
+    border-bottom: none;
+    color: #fff;
+    font-size: 2.25em;
+    position: relative;
+    left: 100px;
+    margin: 10px 0;
+}
+.input {
+    position: relative;
+    z-index: 1;
+    display: block;
+    margin: 1em;
+    direction: ltr;
+    width: 540px;
+    /*max-width: 350px;
+	width: calc(100% - 2em);*/
+    
+    vertical-align: top;
+    margin: 0 auto;
+    float: left;
+        -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.input__field {
+    position: relative;
+    display: block;
+    float: right;
+    padding: 0.8em;
+    width: 60%;
+    border: none;
+    border-radius: 0;
+    background: #015847;
+    color: #fff;
+    -webkit-appearance: none;
+    /* for box shadows to show on iOS */
+}
+.input__field:focus {
+    outline: none;
+}
+.input__label {
+    display: inline-block;
+    float: right;
+    /*padding: 0 1em;*/
+    
+    padding: 0;
+    width: 40%;
+    color: #696969;
+    font-weight: bold;
+    font-size: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.input__label-content {
+    position: relative;
+    display: block;
+    padding: 1.6em 0;
+    width: 100%;
+}
+/*.graphic {
+	position: absolute;
+	top: 0;
+	left: 0;
+	fill: none;
+}*/
+
+.ico {
+    color: #fff;
+    font-size: 2.25em;
+}
+.input--kohana {
+    overflow: hidden;
+    background: #015847;
+}
+.input__field--kohana {
+    width: 100%;
+    background: transparent;
+    padding-left: 2.75em;
+    color: #6a7989;
+}
+.input__label--kohana {
+    position: absolute;
+    width: 100%;
+    text-align: left;
+    pointer-events: none;
+    color: #D2D2D2;
+}
+.input__label-content--kohana {
+    display: inline-block;
+    width: auto;
+    -webkit-transform: translate3d(-1.5em, 0, 0);
+    transform: translate3d(-1.5em, 0, 0);
+    -webkit-transition: -webkit-transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    font-size: 1.75em;
+    margin: 0;
+    padding: 0 0 0 0.2em;
+    bottom: 4px;
+    left: 4px;
+}
+.icon--kohana {
+    display: inline-block;
+    margin-top: 0.45em;
+    -webkit-transform: translate3d(-1em, 0, 0);
+    transform: translate3d(-1em, 0, 0);
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+}
+.input__field--kohana:focus + .input__label--kohana .input__label-content--kohana, .input--filled .input__label-content--kohana {
+    opacity: 0;
+    -webkit-transform: translate3d(100px, 0, 0);
+    transform: translate3d(100px, 0, 0);
+}
+.input__label-content--kohana, .icon--kohana, .input__field--kohana:focus + .input__label--kohana .input__label-content--kohana, .input--filled .input__label-content--kohana {
+    -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+    transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
+}
+.input__field--kohana:focus + .input__label--kohana .icon--kohana, .input--filled .icon--kohana {
+    -webkit-transform: translate3d(0.75em, 0, 0);
+    transform: translate3d(0.75em, 0, 0);
+}
+.input__submit {
+    width: 80px;
+    position: relative;
+    display: block;
+    float: left;
+    height: 65px;
+    outline: none;
+    color: #D2D2D2;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    border-left: 3px solid #00b08c;
+    font-size: 1.75em;
+    font-weight: bold;
+    background: #015847;
+	    -webkit-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+    -webkit-transition: -webkit-transform 0.4s, color 0.4s;
+    -moz-transition: -moz-transform 0.4s, color 0.4s;
+    transition: transform 0.4s, color 0.4s;
+}
+.input__submit:hover {
+    color: #00b08c;
+    -webkit-transition: -webkit-transform 0.4s, color 0.4s;
+    -moz-transition: -moz-transform 0.4s, color 0.4s;
+    transition: transform 0.4s, color 0.4s;
+}
