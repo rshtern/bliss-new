@@ -6,16 +6,12 @@
             width: $(window).width()
         },
         fullVH = $('.fullVH'),
-        overFullVH = $('.over-full-VH'),
-        threehalfVH = $('.threehalfVH'),
         heroSection = $('section.hero');
-    overFullVH.css('min-height', viewport.height * 1.25 + 'px');
-    overFullVH.css('min-width', viewport.width + 'px');
-    fullVH.css('min-height', viewport.height + 'px');
-    fullVH.css('min-width', viewport.width + 'px');
+    fullVH.css('height', viewport.height + 'px');
+    fullVH.css('width', viewport.width + 'px');
     var halfVH = $('.halfVH');
-    halfVH.css('min-height', viewport.height / 2 + 'px');
-    halfVH.css('min-width', viewport.width + 'px');
+    halfVH.css('height', viewport.height / 2 + 'px');
+    halfVH.css('width', viewport.width + 'px');
     console.log(viewport.height + " : " + viewport.width);
     heroSection.css('display', 'table');
     var heroHeader = $('h1.hero-header');
@@ -65,7 +61,7 @@ fixPNGs();
     });
     
     //smoothscroll
-    $('a[href^="#"]').on('click', function(e) {
+    $('nav li > a[href^="#"]').on('click', function(e) {
         e.preventDefault();
         $(document).off("scroll");
 
