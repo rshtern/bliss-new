@@ -78,7 +78,7 @@
     //smoothscroll
     $('nav li > a[href^="#"]').on('click', function(e) {
         e.preventDefault();
-        $(document).off("scroll");
+        //$(document).off("scroll");
 
         $('a').each(function() {
             $(this).parent().removeClass('active');
