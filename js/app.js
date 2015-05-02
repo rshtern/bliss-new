@@ -1,65 +1,80 @@
 (function() {
     // 'use strict';
-
-    var viewport = {
+    var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0,
+        isIE = /*@cc_on!@*/ false || !!document.documentMode,
+        viewport = {
             height: $(window).height(),
             width: $(window).width()
         },
         fullVH = $('.fullVH'),
-        heroSection = $('section.hero');
-    fullVH.css('height', viewport.height + 'px');
-    fullVH.css('width', viewport.width + 'px');
-    var halfVH = $('.halfVH');
-    halfVH.css('height', viewport.height / 2 + 'px');
-    halfVH.css('width', viewport.width + 'px');
-    console.log(viewport.height + " : " + viewport.width);
+        fullVHContact = $('.fullVHContact'),
+        halfVH = $('.halfVH'),
+        heroSection = $('section.hero'),
+        heroHeader = $('h1.hero-header');
+
+    var safariCheck = function() {
+        if (isSafari) {
+            fullVH.css('height', 100 + 'vh');
+            fullVH.css('width', 100 + 'vw');
+			fullVHContact.css('height', viewport.height-100 + 'px');
+            fullVHContact.css('width', viewport.width + 'px');
+            halfVH.css('height', 50 + 'vh');
+            halfVH.css('width', 100 + 'vw');
+            heroHeader.css({
+                'font-size': 100 / 24 + '%',
+                'line-height': 100 / 22 + '%'
+            });
+        } else {
+            fullVH.css('height', viewport.height + 'px');
+            fullVH.css('width', viewport.width + 'px');
+            fullVHContact.css('height', viewport.height-100 + 'px');
+            fullVHContact.css('width', viewport.width + 'px');
+            halfVH.css('height', viewport.height / 2 + 'px');
+            halfVH.css('width', viewport.width + 'px');
+            heroHeader.css({
+                'font-size': viewport.width / 24 + 'px',
+                'line-height': viewport.width / 22 + 'px'
+            });
+        }
+    };
+    safariCheck();
     heroSection.css('display', 'table');
-    var heroHeader = $('h1.hero-header');
-    heroHeader.css({
-        'font-size': viewport.width / 24 + 'px',
-        'line-height': viewport.width / 22 + 'px'
-    });
+    
+
 
     var servicesCol = $('.services-row>.col.s4');
     var setColHeight = servicesCol.eq(0).height();
     servicesCol.eq(1).css('height', setColHeight + 'px');
     servicesCol.eq(2).css('height', setColHeight + 'px');
 
-// PNG SUPPORT FOR IE7-8
-// 
-var isIE = /*@cc_on!@*/false || !!document.documentMode;
-function fixPNGs(){
-  if(isIE){ 
-    var i;
-    //alert(document.images.length);
-    for(i in document.images){
-      if(document.images[i].src){
-        var imgSrc = document.images[i].src;
-        if(imgSrc.substr(imgSrc.length-4) === '.png' || imgSrc.substr(imgSrc.length-4) === '.PNG'){
-        document.images[i].style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='crop',src='" + imgSrc + "')";
+    // PNG SUPPORT FOR IE7-8
+    // 
+
+    function fixPNGs() {
+        if (isIE) {
+            var i;
+            //alert(document.images.length);
+            for (i in document.images) {
+                if (document.images[i].src) {
+                    var imgSrc = document.images[i].src;
+                    if (imgSrc.substr(imgSrc.length - 4) === '.png' || imgSrc.substr(imgSrc.length - 4) === '.PNG') {
+                        document.images[i].style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='crop',src='" + imgSrc + "')";
+                    }
+                }
+            }
         }
-      }
-    }   
-  }
-}
-fixPNGs();
+    }
+    fixPNGs();
     $(window).resize(function() {
         viewport = {
             height: $(window).height(),
             width: $(window).width()
         };
-        fullVH.css('min-height', viewport.height + 'px');
-        fullVH.css('min-width', viewport.width + 'px');
-        halfVH.css('min-height', viewport.height / 2 + 'px');
-        halfVH.css('min-width', viewport.width + 'px');
-        heroHeader.css({
-            'font-size': viewport.width / 18 + 'px',
-            'line-height': viewport.width / 17 + 'px'
-        });
+        safariCheck();
         servicesCol.eq(1).css('height', setColHeight + 'px');
         servicesCol.eq(2).css('height', setColHeight + 'px');
     });
-    
+
     //smoothscroll
     $('nav li > a[href^="#"]').on('click', function(e) {
         e.preventDefault();
@@ -110,7 +125,7 @@ fixPNGs();
             });
             $('.scroll-down').css('opacity', '1');
         }
-        var scrollPos = $(window).scrollTop()+90;
+        var scrollPos = $(window).scrollTop() + 90;
         $('section.hero nav li a').each(function() {
             var currLink = $(this);
             var refElement = $(currLink.attr("href"));
