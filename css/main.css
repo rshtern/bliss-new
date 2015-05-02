@@ -1,5 +1,18 @@
-[data-echo], [data-echo-background] { background: url(../img/spinner.gif) 60px 60px no-repeat center; }
+#preloader {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#122c45; /* change if the mask should have another color then white */
+    z-index:99; /* makes sure it stays on top */
+    text-align: center;
+}
 
+
+[data-echo], [data-echo-background] {
+    background: url(../img/spinner.gif) 60px 60px no-repeat center;
+}
 /*******************/
 /* Font-Face Fonts */
 /*******************/
@@ -455,8 +468,8 @@ ul.circles {
 }
 footer p {
     font-family: 'Open Sans Hebrew', Ariel, sans-serif;
-    font-size: 1.4375em;
-    font-weight: normal;
+    font-size: 1.2em;
+    font-weight: 300;
     text-align: center;
 }
 footer p em {
@@ -534,9 +547,11 @@ header.fixed-nav {
     /*height: 5em;
     position: fixed;
     z-index: 100;*/
+    
     background: #fff;
     /*border-bottom: 1px solid rgba(0, 0, 0, 0.46);*/
     /*width: 100%;*/
+    
     -webkit-transition: all 0.4s ease-in;
     -moz-transition: all 0.4s ease-in;
     -o-transition: all 0.4s ease-in;
@@ -701,9 +716,10 @@ section.contact {
     direction: ltr;
     padding-right: 10px;
     /*margin-bottom: 15px 0 0;*/
-      position: relative;
-  top: 0px;
-  line-height: 1em;
+    
+    position: relative;
+    top: 0px;
+    line-height: 1em;
 }
 .contact ul {
     display: block;
@@ -732,6 +748,10 @@ a.addo {
     position: relative;
     top: 8px;
     right: 4px;
+}
+a.addo > img {
+	position: relative;
+	top: -3px;
 }
 .circle-blue {
     width: 138px;
@@ -929,7 +949,7 @@ ul.circles li > .circle-info {
     background: url("../img/signature.png") center center no-repeat;
     position: absolute;
     top: 75px;
-    left: -60px;
+    left: -45px;
     z-index: 5;
 }
 ul.clients-showcase {
@@ -1443,11 +1463,10 @@ form.contact-form {
     position: relative;
 }
 .contact-form > p {
-	position: absolute;
-	bottom: -0.75em;
-	left: 0;
+    position: absolute;
+    bottom: -0.75em;
+    left: 0;
 }
-
 /********************************/
 /*     contact input effect     */
 /********************************/
@@ -1459,6 +1478,11 @@ input[type=text] {
     position: relative;
     left: 100px;
     margin: 10px 0;
+    top: 0px;
+}
+input[type=text]:focus:not([readonly]) {
+    border: none;
+    box-shadow: none;
 }
 .input {
     position: relative;
@@ -1467,9 +1491,6 @@ input[type=text] {
     margin: 1em;
     direction: ltr;
     width: 540px;
-    /*max-width: 350px;
-	width: calc(100% - 2em);*/
-    
     vertical-align: top;
     margin: 0 auto;
     float: left;
@@ -1494,6 +1515,7 @@ input[type=text] {
     display: inline-block;
     float: right;
     /*padding: 0 1em;*/
+    
     padding: 0;
     width: 40%;
     color: #696969;
@@ -1534,6 +1556,7 @@ input[type=text] {
     background: transparent;
     padding-left: 2.75em;
     color: #6a7989;
+    border: none;
 }
 .input__label--kohana {
     position: absolute;
@@ -1583,22 +1606,22 @@ input[type=text] {
     float: left;
     height: 65px;
     outline: none;
-    color: #ee5f5f;
+    color: #015847;
     padding: 0;
     margin: 0;
     border: 0;
     border-left: 3px solid #00b08c;
     font-size: 1.75em;
     font-weight: normal;
-    background: #015847;
-
-    -webkit-transition: -webkit-transform 0.4s, color 0.4s;
-    -moz-transition: -moz-transform 0.4s, color 0.4s;
-    transition: transform 0.4s, color 0.4s;
+    background: rgba(255, 255, 255, 0.9);
+    -webkit-transition: -webkit-transform 0.4s, all 0.4s;
+    -moz-transition: -moz-transform 0.4s, all 0.4s;
+    transition: transform 0.4s, all 0.4s;
 }
 .input__submit:hover {
     color: #00b08c;
-    -webkit-transition: -webkit-transform 0.4s, color 0.4s;
-    -moz-transition: -moz-transform 0.4s, color 0.4s;
-    transition: transform 0.4s, color 0.4s;
+    background: rgba(255, 255, 255, 1);
+    -webkit-transition: -webkit-transform 0.4s, all 0.4s;
+    -moz-transition: -moz-transform 0.4s, all 0.4s;
+    transition: transform 0.4s, all 0.4s;
 }
