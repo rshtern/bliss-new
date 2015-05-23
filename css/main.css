@@ -481,7 +481,7 @@ h2.team-header > em {
     color: #fff;
 }
 ul.circles {
-    padding: 0 5%;
+    /*padding: 0 5%;*/
     text-align: center;
     margin: 30px auto 0;
     width: 90%;
@@ -1021,11 +1021,13 @@ a.addo > img {
     text-align: center;*/
     
     display: block;
-    position: absolute;
-    top: 8px;
+    position: relative;
+/*    top: 8px;
     bottom: 8px;
     left: 16%;
     right: 16%;
+*/
+margin: 8px auto;
 }
 img.circle {
     width: 122px;
@@ -1040,7 +1042,7 @@ img.circle {
 */
 }
 ul.circles li {
-    width: 50%;
+    width: 47%;
     display: block;
     height: 260px;
     margin: 0 auto;
@@ -1048,11 +1050,14 @@ ul.circles li {
     float: right;
     position: relative;
 }
+ul.circles li:even{
+    margin-right:6%;
+}
 ul.circles li > .circle-info {
     position: absolute;
     top: 150px;
     margin: 15px auto 0;
-    width: 90%;
+    width: 100%;
     text-align: center;
 }
 .signature {
@@ -2005,10 +2010,10 @@ input[type=text]:focus:not([readonly]) {
     }
     section.contact {
         min-height: 570px;
-        width: 100%main.min.css;
+        width: 100%;
     }
     form.contact-form {
-        width: 320px;
+        width: 288px;
     }
     .contact-box {
         max-width: 320px;
@@ -2043,7 +2048,7 @@ input[type=text]:focus:not([readonly]) {
         margin-bottom: 4em;
     }
     .input__submit {
-        width: 120px;
+        width: 88px;
     }
     .icon--kohana{
         display: none;
