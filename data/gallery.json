@@ -1,0 +1,27 @@
+{
+  "fancy": {
+    "alt": "כנסים והשקות",
+    "images": 21
+  },
+  "challange": {
+    "alt": "ימי כיף וגיבוש",
+    "images": 30
+  },
+  "outdoor": {
+    "alt": "בחיק הטבע",
+    "images": 28
+  },
+  "worldwide": {
+    "alt": "ארועים בחו\"ל",
+    "images": 10
+  },
+  "vibes": {
+    "alt": "אנשים ואווירה",
+    "images": 19
+  },
+  "concept": {
+    "alt": "קונספטים",
+    "images": 24
+  },
+  "path": "img/gallery/"
+}

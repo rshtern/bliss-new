@@ -1,5 +1,17 @@
 (function() {
     // 'use strict';
+
+        var zIndex = [],
+            zHolder = '', 
+            zSplit = [];
+
+        // store and modify the section's z-index when gallery happens...
+        $.each($('section'), function(key){
+           zIndex.push( $('section').eq(key).css('z-index') );
+           zHolder = zIndex.join([separator = ',']);
+           zSplit = zHolder.split(',');
+        }); 
+
     var isSafari = Object.prototype.toString.call(window.HTMLElement).indexOf('Constructor') > 0,
         isIE = /*@cc_on!@*/ false || !!document.documentMode,
         viewport = {
@@ -7,43 +19,48 @@
             width: $(window).width()
         },
         fullVH = $('.fullVH'),
-        fullVHContact = $('.fullVHContact'),
+        fullVW = $('.fullVW'),
         halfVH = $('.halfVH'),
         heroSection = $('section.hero'),
         heroHeader = $('h1.hero-header');
 
+    $('.parallax').parallax();
+
     var safariCheck = function() {
         if (isSafari) {
-            fullVH.css('height', 100 + 'vh');
-            fullVH.css('width', 100 + 'vw');
-			fullVHContact.css('height', viewport.height-100 + 'px');
-            fullVHContact.css('width', viewport.width + 'px');
-            halfVH.css('height', 50 + 'vh');
-            halfVH.css('width', 100 + 'vw');
+            fullVH.css('height', window.innerHeight + "px");
+            halfVH.css('height', window.innerHeight / 2 + "px");
             heroHeader.css({
-                'font-size': 100 / 24 + '%',
-                'line-height': 100 / 22 + '%'
+                'font-size': window.innerWidth / 24 + 'px',
+                'line-height': window.innerWidth / 22 + 'px'
             });
         } else {
             fullVH.css('height', viewport.height + 'px');
-            fullVH.css('width', viewport.width + 'px');
-            fullVHContact.css('height', viewport.height-100 + 'px');
-            fullVHContact.css('width', viewport.width + 'px');
+            // fullVH.css('width', viewport.width + 'px');
+            // fullVW.css('width', viewport.width + 'px');
+            //fullVHContact.css('height', viewport.height - 100 + 'px');
+            // fullVHContact.css('width', viewport.width + 'px');
             halfVH.css('height', viewport.height / 2 + 'px');
-            halfVH.css('width', viewport.width + 'px');
-            heroHeader.css({
-                'font-size': viewport.width / 24 + 'px',
-                'line-height': viewport.width / 22 + 'px'
-            });
+            // halfVH.css('width', viewport.width + 'px');
+            if(viewport.width < 571){
+                heroHeader.css({
+                    'font-size': viewport.width / 13 + 'px',
+                    'line-height': viewport.width / 8 + 'px'
+                });
+            } else {
+                heroHeader.css({
+                    'font-size': viewport.width / 24 + 'px',
+                    'line-height': viewport.width / 22 + 'px'
+                });
+                
+            }
+
         }
     };
     safariCheck();
-    heroSection.css('display', 'table');
-    
-
-
-    var servicesCol = $('.services-row>.col.s4');
-    var setColHeight = servicesCol.eq(0).height();
+    // heroSection.css('display', 'table');
+    var servicesCol = $('.services-row>.col.s4'),
+        setColHeight = servicesCol.eq(0).height();
     servicesCol.eq(1).css('height', setColHeight + 'px');
     servicesCol.eq(2).css('height', setColHeight + 'px');
 
@@ -65,6 +82,7 @@
         }
     }
     fixPNGs();
+
     $(window).resize(function() {
         viewport = {
             height: $(window).height(),
@@ -84,7 +102,12 @@
             $(this).parent().removeClass('active');
         });
         $(this).parent().addClass('active');
-
+        var hasshh = this.href.match(/(#)([a-z]+)/g)[0];
+        if (hasshh === '#services') {
+            if (!$('.services-row').hasClass('fade-In-Up')) {
+                $('.services-row').addClass('fade-In-Up');
+            }
+        }
         var target = this.hash,
             menu = target;
         $target = $(target);
@@ -132,20 +155,23 @@
             if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
                 $('section.hero nav li').removeClass("active");
                 currLink.parent().addClass("active");
+                //console.log(currLink.attr("href")); 
+                //window.location.hash = currLink.attr("href"); 
             } else {
                 currLink.parent().removeClass("active");
             }
         });
     });
 
+var elem = document.documentElement,
+            header = $('header');
+
     /****************************************************/
     /*         header shrinking when scrolling         */
     /****************************************************/
     var AnimatedHeader = (function() {
 
-        var elem = document.documentElement,
-            header = $('header'),
-            didScroll = false,
+        var didScroll = false,
             changeHeaderOn = viewport.height / 3.25;
 
         function init() {
@@ -173,4 +199,92 @@
 
         init();
     }());
+
+    /***************************************/
+    /*        image gallery builder        */
+    /***************************************/
+
+    var imageGallery = function() {
+        $.getJSON("data/gallery.json", function(data) {
+            var items = {},
+                stored = {};
+            // min = i, max = data[key].images     
+            function prevImage(min, max){
+                if(min<1){
+                    return max;
+                } else {
+                    return min;
+                }
+            }
+            function nextImage(min, max){
+                if(min===(max-1)){
+                    return 2;
+                } else {
+                    return min+2;
+                }
+            }
+            $.each(data, function(key, val) {
+                items[key] = [];
+                stored[key] = [];
+                for (var i = 0; i < +data[key].images; i++) {
+                    if (key !== 'path') {
+                        items[key].push("<div id='" + key + "-" + (i + 1) + "' class='overlay'><a class='close' href='#page'><span class='icon-close'></span></a><a href='#" + key + "-" + prevImage(i, data[key].images) + "' class='prev'><span class='icon-angle-left2'></span></a><a href='#" + key + "-" + (nextImage(i, data[key].images)) + "' class='next'><span class='icon-angle-right2'></span></a><a href='#" + key + "-" + (nextImage(i, data[key].images)) + "' class='image-holder'><img src='" + data.path + "" + key + "/" + (i + 1) + ".jpg' alt='" + data[key].alt + "'/></a></div>");
+                    }
+                }
+                stored[key].push([items[key].join("")]);
+                $('figure.' + key).append($('<div class="gallery-' + key + '">' + stored[key] + '</div>'));
+            });
+
+        });
+    };
+    imageGallery();
+
+    
+    $('section').on('click', function(e){
+        var $target = $(e.target);
+
+        if($target.offsetParent()[0].nodeName.toLowerCase() === 'figcaption' || $target.offsetParent()[0].nodeName.toLowerCase() === 'figure'){
+            $.each($('section'), function(key, val){
+                $('section').eq(key).css('z-index', '0');               
+            });
+            $('section#gallery').css('z-index', '999');
+            console.log(zHolder);
+        }
+        console.log(e.target.nodeName.toLowerCase());
+        if($target.hasClass('overlay') || $target.hasClass('icon-close')){
+            console.log(window.location.hash);
+             $.each($('section'), function(key, val){
+                $('section').eq(key).css('z-index', zSplit[key]);               
+            });
+            window.location.hash = '#page';
+        }
+    });
+    function inputCheck(){
+        var inputField = $('input#input-email');
+        var inputLabel = $('span.input__label-content');
+        inputField.on('input', function(e){
+            if(inputField.val() !== ''){
+                inputLabel.css('visibility', 'hidden');
+            } else {
+                inputLabel.css('visibility', 'visible');
+            }
+        });
+    }
+    inputCheck();
+    function responsiveMenu(){
+        var smallHeader = $('.small-header'),
+            openMenu = $('ul#small-menu'),
+            smallMenu = $('a.small-menu-button')[0];
+        $('.small-menu-button').on('click', function(e){
+            var target = e.target;
+            console.log(target);
+            if(openMenu.css('display') === 'block'){
+                smallMenu.href = '#page';
+            } else if((openMenu.css('display') === 'none')){
+                smallMenu.href = '#small-menu';
+                //openMenu.css('display', 'none');
+            }
+        });
+    }
+    responsiveMenu();
 }());
