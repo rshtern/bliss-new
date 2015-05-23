@@ -1050,7 +1050,7 @@ ul.circles li {
     float: right;
     position: relative;
 }
-ul.circles li:even{
+ul.circles li:nth-child(even){
     margin-right:6%;
 }
 ul.circles li > .circle-info {
