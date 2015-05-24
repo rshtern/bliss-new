@@ -125,7 +125,7 @@
 
     // scroll event behaviors
     $(window).scroll(function() {
-        if (viewport.width > 480) {
+        
             if ($(this).scrollTop() > viewport.height / 4) {
                 $('.main-header').css({
                     'opacity': '0',
@@ -166,9 +166,6 @@
                     currLink.parent().removeClass("active");
                 }
             });
-        } else {
-            return;
-        }
     });
 
     var elem = document.documentElement,
@@ -204,7 +201,9 @@
         function scrollY() {
             return window.pageYOffset || elem.scrollTop;
         }
+        if (viewport.width > 480) {
             init();
+        }
     }());
 
     /***************************************/
