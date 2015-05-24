@@ -204,9 +204,7 @@
         function scrollY() {
             return window.pageYOffset || elem.scrollTop;
         }
-        if (viewport.width > 480) {
             init();
-        }
     }());
 
     /***************************************/
