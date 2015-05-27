@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <svg version="1.1" id="close-btn_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-	 x="0px" y="0px" width="44px" height="44px" viewBox="0 0 44 44"
+	 x="0px" y="0px" width="32.5px" height="32.5px" viewBox="0 0 32.5 32.5" enable-background="new 0 0 32.5 32.5"
 	 xml:space="preserve">
 
 	<g>
+		<path fill="#FFFFFF" d="M16.25,32.5C7.29,32.5,0,25.21,0,16.25S7.29,0,16.25,0S32.5,7.29,32.5,16.25S25.21,32.5,16.25,32.5z M16.25,1
+			C7.841,1,1,7.841,1,16.25S7.841,31.5,16.25,31.5S31.5,24.659,31.5,16.25S24.659,1,16.25,1z"/>
 			<path fill="#FFFFFF" d="M22.917,23.667c-0.192,0-0.384-0.073-0.53-0.22L9.053,10.114c-0.293-0.293-0.293-0.768,0-1.061
 				c0.293-0.293,0.768-0.293,1.061,0l13.333,13.333c0.294,0.294,0.294,0.769,0,1.062C23.301,23.594,23.109,23.667,22.917,23.667z"/>
 			<path fill="#FFFFFF" d="M9.583,23.667c-0.192,0-0.384-0.073-0.53-0.22c-0.293-0.293-0.293-0.768,0-1.062L22.387,9.053
