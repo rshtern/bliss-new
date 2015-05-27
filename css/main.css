@@ -421,9 +421,9 @@ nav ul a {
     text-align: center;
     font-family: 'Slim Joe', Arial, sans-serif;
     letter-spacing: 0.05rem;
-    text-shadow: -1px 1px 7px rgba(00, 00, 00, 0.3);
+    text-shadow: -1px 1px 7px rgba(00, 00, 00, 0.5);
     color: #fff;
-    color: rgba(255, 255, 255, 0.9);
+    color: rgba(255, 255, 255, 1);
     /*font-weight: bold;*/
 }
 h2.about-header, h2.team-header, h2.services-header, h2.clients-header, h2.contact-header {
@@ -1962,6 +1962,9 @@ input[type=text]:focus:not([readonly]) {
     .services-row {
         width: 100%;
     }
+    .col.s4:first-child{
+        display: none;
+    }
     .row .col.s3 {
         line-height: 1.25em;
         width: 15%;
@@ -1992,6 +1995,7 @@ input[type=text]:focus:not([readonly]) {
           background: url('../img/logos-xhdpi.jpg') center center no-repeat;
   background-size: contain;
   max-width: 90%;
+  height: 300px;
     }
     ul.clients-showcase {
         display: none;
@@ -2119,6 +2123,9 @@ input[type=text]:focus:not([readonly]) {
         width: 100%;
         height: 60px;
         background: #fff;
+          top: 0;
+  left: 0;
+  right: 0;
     }
     .small-header > a[href="#contact"] {
         position: absolute;
@@ -2267,6 +2274,9 @@ input[type=text]:focus:not([readonly]) {
     }
     .services-row {
         width: 100%;
+    }
+    .col.s4:first-child{
+        display: none;
     }
     .row .col.s3 {
         line-height: 1.25em;
