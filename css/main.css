@@ -432,7 +432,7 @@ h2.about-header, h2.team-header, h2.services-header, h2.clients-header, h2.conta
     font-size: 4.5em;
     letter-spacing: 0.156em;
     line-height: 1.45em;
-    margin: 1.25em 0 0.45em;
+    margin: 0 0 0.45em;
 }
 h2.clients-header {
     margin-bottom: 1.25em;
@@ -459,8 +459,8 @@ h2.about-header > em, h2.services-header > em, h2.clients-header > em {
 h2.team-header {
     text-align: center;
     font-family: 'Nexa-Rust-Sans-Black';
-    font-size: 3em;
-    margin: 2.6em 0 0.025em;
+  font-size: 2.65em;
+  margin: 0.95em 0 0.025em;
     line-height: 1em;
     letter-spacing: 1px;
     color: #fff;
@@ -721,7 +721,8 @@ section.about {
 }
 section.comp-break {
     background: url('../img/pacman.jpg') center center no-repeat;
-    
+    background-size: cover;
+    background-attachment: fixed;
     position: relative;
     height: 325px;
 }
@@ -755,15 +756,9 @@ section.services {
 }
 section.clients {
     position: relative;
-    /*z-index: 9;*/
-    
-    padding: 5% 0;
-    /*display: table-cell;*/
-    
+    padding: 0 0 15%;    
     width: 100%;
-    min-height: 1000px;
-    /*height: 100vh;*/
-    
+    /*min-height: 1000px;*/
     vertical-align: middle;
     display: block;
 }
@@ -1990,10 +1985,13 @@ input[type=text]:focus:not([readonly]) {
     }
     section.clients {
         height: auto;
+        padding: 5% 0 15%;
     }
     .clients-full {
         display: block;
-        background: url('../img/clients-small.jpg') center top no-repeat;
+          background: url('../img/logos-xhdpi.jpg') center center no-repeat;
+  background-size: contain;
+  max-width: 90%;
     }
     ul.clients-showcase {
         display: none;
@@ -2297,10 +2295,13 @@ input[type=text]:focus:not([readonly]) {
     }
     section.clients {
         height: auto;
+        padding: 5% 0 15%;
     }
     .clients-full {
         display: block;
-        background: url('../img/clients-small.jpg') center top no-repeat;
+  background: url('../img/logos-xhdpi.jpg') center center no-repeat;
+  background-size: contain;
+  max-width: 90%;
     }
     ul.clients-showcase {
         display: none;
@@ -2388,6 +2389,11 @@ input[type=text]:focus:not([readonly]) {
     nav {
         right: 5%;
     }
+    h2.about-header, h2.team-header, h2.services-header, h2.clients-header, h2.contact-header {
+          font-size: 3.5em;
+          line-height: 1.25em;
+  margin: 1.25em 0 0.45em;
+    }
     .logo {
         top: 11px;
         left: 5%;
@@ -2460,15 +2466,21 @@ input[type=text]:focus:not([readonly]) {
     section.gallery {
 /*        min-height: 800px;
 */    }
+section.clients{
+    padding: 1% 0 30%;
+}
     .clients-full {
         display: block;
-        background: url('../img/clients-meduim.jpg') center center no-repeat;
+  background: url('../img/logos-xhdpi.jpg') center center no-repeat;
+  background-size: contain;
+  max-width: 90%;
     }
     ul.clients-showcase {
         display: none;
     }
     h2.clients-header{
         letter-spacing: 1px;
+        margin-top: 25%;
     }
     .gallery figure {
         width: 50%;
@@ -2537,6 +2549,10 @@ input[type=text]:focus:not([readonly]) {
     section.about {
         min-height: 700px;
     }
+    h2.team-header{
+          margin: 0.7em 0 0.025em;
+            font-size: 3em;
+    }
     .about-left {
         width: 45%;
     }
@@ -2587,7 +2603,9 @@ input[type=text]:focus:not([readonly]) {
     }
     .clients-full {
         display: block;
-        background: url('../img/clients-large.jpg') center center no-repeat;
+  background: url('../img/logos-xhdpi.jpg') center center no-repeat;
+  background-size: contain;
+  max-width: 90%;
     }
     ul.clients-showcase {
         display: none;
@@ -2601,6 +2619,9 @@ input[type=text]:focus:not([readonly]) {
     }
     figure.effect-roxy h2 {
         font-size: 60px;
+    }
+    h2.clients-header{
+        padding-top: 25%;
     }
     ul.clients-showcase {
         display: none;
