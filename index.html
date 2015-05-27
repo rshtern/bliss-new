@@ -44,7 +44,10 @@
 </head>
 
 <body dir="rtl">
-   
+   <div id="preloader">
+       <div class="bliss-logo"><span class="icon-bliss-logo"></span></div>
+       <p>Loading...</p>
+   </div>
     <section class="hero fullVH clearfix">
         <header class="z-depth-1 clearfix">
             <div class="logo">
@@ -343,6 +346,10 @@
     $(window).load(function () {
         clearInterval(interval);
         NProgress.done();
+        $('#preloader').hide();
+        $('body').attr({
+            'overflow-y': 'scroll'
+        });
     });
 
     // Trigger bar when exiting the page
