@@ -1784,6 +1784,7 @@ input[type=text]:focus:not([readonly]) {
     background: url('../img/pacman-small.jpg') top center no-repeat;
     background-size: auto;
     background-attachment: auto;
+    z-index: 3;
 }
     h2.about-header, h2.team-header, h2.services-header, h2.clients-header, h2.contact-header {
         text-align: center;
@@ -2256,6 +2257,7 @@ input[type=text]:focus:not([readonly]) {
         background-attachment: initial;
         background: url('../img/pacman-small.jpg') no-repeat;
         background-size: cover;
+        z-index: 3;
     }
     section.services {
         height: auto!important;

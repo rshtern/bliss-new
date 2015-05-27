@@ -62,7 +62,7 @@
 <body dir="rtl" style='overflow: hidden;'>
    <div id="preloader">
        <div class="bliss-logo"><span class="icon-bliss-logo"></span></div>
-       <p>Loading...</p>
+       <p>...Loading</p>
    </div>
     <section class="hero fullVH clearfix">
         <header class="z-depth-1 clearfix">
@@ -357,12 +357,13 @@
 
     // Increase randomly
     var interval = setInterval(function() { NProgress.inc(); }, 1000);        
-
+    $('.main-header').hide();
     // Trigger finish when page fully loaded
     $(window).load(function () {
         clearInterval(interval);
         NProgress.done();
         $('#preloader').hide();
+        $('.main-header').show();
         $('body').css('overflow-y', 'scroll');
     });
 
