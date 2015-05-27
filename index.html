@@ -358,13 +358,17 @@
     // Increase randomly
     var interval = setInterval(function() { NProgress.inc(); }, 1000);        
     $('.main-header').hide();
+    $('.scroll-down').hide();
     // Trigger finish when page fully loaded
     $(window).load(function () {
         clearInterval(interval);
         NProgress.done();
-        $('#preloader').hide();
-        $('.main-header').show();
-        $('body').css('overflow-y', 'scroll');
+        if(NProgress.done()){
+            $('#preloader').hide();
+            $('.main-header').show();
+            $('.scroll-down').show();
+            $('body').css('overflow-y', 'scroll');
+        }
     });
 
     // Trigger bar when exiting the page
