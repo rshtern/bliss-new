@@ -30,10 +30,18 @@
         if (isSafari) {
             fullVH.css('height', window.innerHeight + "px");
             halfVH.css('height', window.innerHeight / 2 + "px");
-            heroHeader.css({
-                'font-size': window.innerWidth / 24 + 'px',
-                'line-height': window.innerWidth / 22 + 'px'
-            });
+            if (window.innerWidth === 320) {
+                heroHeader.css({
+                    'font-size': window.innerWidth / 18 + 'px',
+                    'line-height': window.innerWidth / 14 + 'px'
+                });
+            } else {
+                heroHeader.css({
+                    'font-size': window.innerWidth / 24 + 'px',
+                    'line-height': window.innerWidth / 22 + 'px'
+                });
+
+            }
         } else {
             fullVH.css('height', viewport.height + 'px');
             // fullVH.css('width', viewport.width + 'px');
@@ -42,10 +50,11 @@
             // fullVHContact.css('width', viewport.width + 'px');
             halfVH.css('height', viewport.height / 2 + 'px');
             // halfVH.css('width', viewport.width + 'px');
+            
             if (viewport.width < 571) {
                 heroHeader.css({
-                    'font-size': viewport.width / 13 + 'px',
-                    'line-height': viewport.width / 8 + 'px'
+                    'font-size': viewport.width / 12.5 + 'px',
+                    'line-height': viewport.width / 9 + 'px'
                 });
             } else {
                 heroHeader.css({
@@ -125,47 +134,47 @@
 
     // scroll event behaviors
     $(window).scroll(function() {
-        
-            if ($(this).scrollTop() > viewport.height / 4) {
-                $('.main-header').css({
-                    'opacity': '0',
-                    '-webkit-transition': 'opacity 0.5s ease-in-out',
-                    '-moz-transition': 'opacity 0.5s ease-in-out',
-                    '-ms-transition': 'opacity 0.5s ease-in-out',
-                    '-o-transition': 'opacity 0.5s ease-in-out',
-                    'animation-timing-function': 'ease',
-                    '-webkit-animation-timing-function': 'ease',
-                    'animation-iteration-count': '1',
-                    '-webkit-animation-iteration-count': '1'
-                });
-                $('.scroll-down').css('opacity', '0');
-            } else if ($(this).scrollTop() <= viewport.height / 4) {
-                $('.main-header').css({
-                    'opacity': '1',
-                    '-webkit-transition': 'opacity 0.5s ease-in-out',
-                    '-moz-transition': 'opacity 0.5s ease-in-out',
-                    '-ms-transition': 'opacity 0.5s ease-in-out',
-                    '-o-transition': 'opacity 0.5s ease-in-out',
-                    'animation-timing-function': 'ease',
-                    '-webkit-animation-timing-function': 'ease',
-                    'animation-iteration-count': '1',
-                    '-webkit-animation-iteration-count': '1'
-                });
-                $('.scroll-down').css('opacity', '1');
-            }
-            var scrollPos = $(window).scrollTop() + 90;
-            $('section.hero nav li a').each(function() {
-                var currLink = $(this);
-                var refElement = $(currLink.attr("href"));
-                if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-                    $('section.hero nav li').removeClass("active");
-                    currLink.parent().addClass("active");
-                    //console.log(currLink.attr("href")); 
-                    //window.location.hash = currLink.attr("href"); 
-                } else {
-                    currLink.parent().removeClass("active");
-                }
+
+        if ($(this).scrollTop() > viewport.height / 4) {
+            $('.main-header').css({
+                'opacity': '0',
+                '-webkit-transition': 'opacity 0.5s ease-in-out',
+                '-moz-transition': 'opacity 0.5s ease-in-out',
+                '-ms-transition': 'opacity 0.5s ease-in-out',
+                '-o-transition': 'opacity 0.5s ease-in-out',
+                'animation-timing-function': 'ease',
+                '-webkit-animation-timing-function': 'ease',
+                'animation-iteration-count': '1',
+                '-webkit-animation-iteration-count': '1'
             });
+            $('.scroll-down').css('opacity', '0');
+        } else if ($(this).scrollTop() <= viewport.height / 4) {
+            $('.main-header').css({
+                'opacity': '1',
+                '-webkit-transition': 'opacity 0.5s ease-in-out',
+                '-moz-transition': 'opacity 0.5s ease-in-out',
+                '-ms-transition': 'opacity 0.5s ease-in-out',
+                '-o-transition': 'opacity 0.5s ease-in-out',
+                'animation-timing-function': 'ease',
+                '-webkit-animation-timing-function': 'ease',
+                'animation-iteration-count': '1',
+                '-webkit-animation-iteration-count': '1'
+            });
+            $('.scroll-down').css('opacity', '1');
+        }
+        var scrollPos = $(window).scrollTop() + 90;
+        $('section.hero nav li a').each(function() {
+            var currLink = $(this);
+            var refElement = $(currLink.attr("href"));
+            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+                $('section.hero nav li').removeClass("active");
+                currLink.parent().addClass("active");
+                //console.log(currLink.attr("href")); 
+                //window.location.hash = currLink.attr("href"); 
+            } else {
+                currLink.parent().removeClass("active");
+            }
+        });
     });
 
     var elem = document.documentElement,

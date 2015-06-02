@@ -1805,8 +1805,8 @@ input[type=text]:focus:not([readonly]) {
         font-size: 75%;
     }
     section.comp-break {
-    background: url('../img/pacman-small.jpg') center 110% no-repeat;
-    background-size: auto;
+    background: url('../img/pacman-small.jpg') center top no-repeat;
+    background-size: cover;
     z-index: 9;
 }
     h2.about-header, h2.team-header, h2.services-header, h2.clients-header, h2.contact-header {
@@ -1896,7 +1896,8 @@ input[type=text]:focus:not([readonly]) {
     }*/
 
     ul#small-menu li a{
-            padding: 35px 40%;
+            /*padding: 35px 40%;*/
+            text-align: center;
         line-height: 70px;
     }
 	ul#small-menu a:hover, ul#small-menu a:active, ul#small-menu a:focus{
