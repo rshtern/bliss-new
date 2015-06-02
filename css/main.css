@@ -1381,9 +1381,9 @@ img.fadeOut:hover {
     position: relative;
     margin: 0 auto;
     width: 100%;
-   /* min-height: 632px;*/
-    max-height: 900px;
-    height: auto;
+    min-height: 632px;
+    height: 900px;
+    /*height: auto;*/
     list-style: none;
     text-align: center;
     z-index: 9;
