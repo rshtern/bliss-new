@@ -828,7 +828,7 @@ section.contact {
     top: 0px;
     line-height: 0.9em;
     letter-spacing: 1.25px;
-    color: #fff;
+    color: rgb(0, 216, 255);
 }
 .contact-box .right{
   width: 170px;
@@ -1382,6 +1382,7 @@ img.fadeOut:hover {
     margin: 0 auto;
     width: 100%;
     min-height: 632px;
+    max-height: 900px;
     height: auto;
     list-style: none;
     text-align: center;
