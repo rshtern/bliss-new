@@ -5,70 +5,74 @@
     <meta charset="UTF-8">
     <title>Bliss Bussinness</title>
     <style>
-   #preloader{
-    position:fixed;
-    width:100%;
-    height: 100%;
-    background: #00b08c;
-    z-index: 999;
-}
-.bliss-logo{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -ms-transform: translate3d(-50%, -50%, 0);
-    -webkit-transform: translate3d(-50%, -50%, 0);
-    transform: translate3d(-50%, -50%, 0);
-    font-size: 5rem;
-    z-index: 10;
-    color:#fff;
-}
-#preloader > p {
-     position: absolute;
-    top: 60%;
-    left: 52%;
-    -ms-transform: translate3d(-60%, -52%, 0);
-    -webkit-transform: translate3d(-60%, -52%, 0);
-    transform: translate3d(-60%, -52%, 0);
-    z-index: 100;
-    text-align: center;
-}
+    #preloader {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background: #EE5F5F;
+        z-index: 999;
+    }
+    .bliss-logo {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        -ms-transform: translate3d(-50%, -40%, 0);
+        -webkit-transform: translate3d(-50%, -40%, 0);
+        transform: translate3d(-50%, -40%, 0);
+        font-size: 10.6rem;
+        z-index: 10;
+        color: #fff;
+    }
+    @media only screen and (min-width: 320px) and (max-width: 570px) {
+        .bliss-logo {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            -ms-transform: translate3d(-50%, -40%, 0);
+            -webkit-transform: translate3d(-50%, -40%, 0);
+            transform: translate3d(-50%, -40%, 0);
+            font-size: 5rem;
+            z-index: 10;
+            color: #fff;
+        }
+    }
     </style>
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
     <link rel="stylesheet" href="css/nprogress.css">
     <link rel="stylesheet" href="css/main.css">
     <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" /> -->
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
-<!--     <script src="js/queryloader2.min.js" type="text/javascript"></script>
+    <!--     <script src="js/queryloader2.min.js" type="text/javascript"></script>
     <script src="js/preload.js" type="text/javascript"></script>
- -->    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<meta name="msapplication-TileColor" content="#ffffff">
-<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-<meta name="theme-color" content="#ffffff">
+ -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 <body dir="rtl" style='overflow: hidden;'>
-   <div id="preloader">
-       <div class="bliss-logo"><span class="icon-bliss-logo"></span></div>
-       <p>...Loading</p>
-   </div>
-    <section class="hero fullVH clearfix">
+    <div id="preloader">
+        <div class="bliss-logo"><span class="icon-bliss-logo"></span>
+        </div>
+    </div>
+    <section id="top-page" class="hero fullVH clearfix">
         <header class="z-depth-1 clearfix">
             <div class="logo">
-                <a href="http://www.blissprod.co.il/">
+                <a href="#top-page">
                     <span class="icon-bliss-logo"></span>
                 </a>
             </div>
@@ -89,21 +93,25 @@
         </header>
         <div class="small-header z-depth-1 clearfix">
             <a href="#contact">
-                    <span class="icon-phone"></span>
+                <span class="icon-phone"></span>
             </a>
             <div class="small-logo">
-                <a href="http://www.blissprod.co.il/">
-                   <span class="icon-bliss-logo"></span>
+                <a href="#top-page">
+                    <span class="icon-bliss-logo"></span>
                 </a>
             </div>
             <a class="small-menu-button" href="#small-menu">
-                    <span class="icon-menu"></span>
+                <span class="icon-menu"></span>
             </a>
             <ul id="small-menu">
-                    <li><a href="#about">אודותינו</a></li>
-                    <li><a href="#services">שירותינו</a></li>
-                    <li><a href="#gallery">גלריה</a></li>
-                <li><a href="#clients">לקוחותינו</a></li>
+                <li><a href="#about">אודותינו</a>
+                </li>
+                <li><a href="#services">שירותינו</a>
+                </li>
+                <li><a href="#gallery">גלריה</a>
+                </li>
+                <li><a href="#clients">לקוחותינו</a>
+                </li>
             </ul>
         </div>
         <div class="main-header" style="display: none">
@@ -225,7 +233,7 @@
             </a>
         </figure>
         <figure class="effect-roxy challange">
-            <a href="#challange-1" class="lightbox"> <img class="thumb" src="img/gallery/overlay2.jpg" alt="ימי כיף וגיבוש"/>
+            <a href="#challange-1" class="lightbox"> <img class="thumb" src="img/gallery/overlay2.jpg" alt="ימי כיף וגיבוש" />
                 <figcaption>
                     <h2>Challange</h2>
                     <p>ימי כיף וגיבוש</p>
@@ -233,7 +241,7 @@
             </a>
         </figure>
         <figure class="effect-roxy outdoor">
-            <a href="#outdoor-1" class="lightbox"> <img class="thumb" src="img/gallery/overlay3.jpg" alt="בחיק הטבע"/>
+            <a href="#outdoor-1" class="lightbox"> <img class="thumb" src="img/gallery/overlay3.jpg" alt="בחיק הטבע" />
                 <figcaption>
                     <h2>Outdoor</h2>
                     <p>בחיק הטבע</p>
@@ -241,7 +249,7 @@
             </a>
         </figure>
         <figure class="effect-roxy vibes">
-            <a href="#vibes-1" class="lightbox"> <img class="thumb" src="img/gallery/overlay4.jpg" alt="אנשים ואווירה"/>
+            <a href="#vibes-1" class="lightbox"> <img class="thumb" src="img/gallery/overlay4.jpg" alt="אנשים ואווירה" />
                 <figcaption>
                     <h2>Good Vibes</h2>
                     <p>אנשים ואווירה</p>
@@ -249,7 +257,7 @@
             </a>
         </figure>
         <figure class="effect-roxy worldwide">
-            <a href="#worldwide-1" class="lightbox"> <img class="thumb" src="img/gallery/overlay5.jpg" alt='ארועים בחו"ל'/>
+            <a href="#worldwide-1" class="lightbox"> <img class="thumb" src="img/gallery/overlay5.jpg" alt='ארועים בחו"ל' />
                 <figcaption>
                     <h2>World Wide</h2>
                     <p>ארועים בחו"ל</p>
@@ -257,7 +265,7 @@
             </a>
         </figure>
         <figure class="effect-roxy concept">
-            <a href="#concept-1" class="lightbox"> <img class="thumb" src="img/gallery/overlay6.jpg" alt="קונספטים"/>
+            <a href="#concept-1" class="lightbox"> <img class="thumb" src="img/gallery/overlay6.jpg" alt="קונספטים" />
                 <figcaption>
                     <h2>Concepts</h2>
                     <p>קונספטים</p>
@@ -270,41 +278,41 @@
         <div class="clients-full"></div>
         <ul class="clients-showcase">
             <li>
-                <img class="fadeOut" src="img/bw/xtrem.jpg" height="108" width="125" >
+                <img class="fadeOut" src="img/bw/xtrem.jpg" height="108" width="125">
                 <img class="bottom-color" src="img/color/xtrem.jpg" height="108" width="125" alt="Xterm IO">
             </li>
-            <li> <img class="fadeOut" src="img/bw/fundtech.jpg" height="108" width="303" > <img class="bottom-color" src="img/color/fundtech.jpg" height="108" width="303" alt="FUNDtech"> </li>
-            <li> <img class="fadeOut" src="img/bw/elbit.jpg" height="108" width="258" > <img class="bottom-color" src="img/color/elbit.jpg" height="108" width="258" alt="אלביט"> </li>
-            <li> <img class="fadeOut" src="img/bw/playtika.jpg" height="108" width="289" > <img class="bottom-color" src="img/color/playtika.jpg" height="108" width="289" alt="Playtika"> </li>
+            <li> <img class="fadeOut" src="img/bw/fundtech.jpg" height="108" width="303"> <img class="bottom-color" src="img/color/fundtech.jpg" height="108" width="303" alt="FUNDtech"> </li>
+            <li> <img class="fadeOut" src="img/bw/elbit.jpg" height="108" width="258"> <img class="bottom-color" src="img/color/elbit.jpg" height="108" width="258" alt="אלביט"> </li>
+            <li> <img class="fadeOut" src="img/bw/playtika.jpg" height="108" width="289"> <img class="bottom-color" src="img/color/playtika.jpg" height="108" width="289" alt="Playtika"> </li>
         </ul>
         <ul class="clients-showcase">
-            <li> <img class="fadeOut" src="img/bw/holon.jpg" height="108" width="139" > <img src="img/color/holon.jpg" height="108" width="139" alt="תיאטרון חולון"> </li>
-            <li> <img class="fadeOut" src="img/bw/park.jpg" height="108" width="129" > <img src="img/color/park.jpg" height="108" width="129" alt="פארק מיני ישראל"> </li>
-            <li> <img class="fadeOut" src="img/bw/roladin.jpg" height="108" width="126" > <img src="img/color/roladin.jpg" height="108" width="126" alt="רולדין"> </li>
-            <li> <img class="fadeOut" src="img/bw/technion.jpg" height="108" width="110" > <img src="img/color/technion.jpg" height="108" width="110" alt="הטכניון"> </li>
-            <li> <img class="fadeOut" src="img/bw/teva.jpg" height="108" width="182" > <img src="img/color/teva.jpg" height="108" width="182" alt="טבע"> </li>
-            <li> <img class="fadeOut" src="img/bw/at.jpg" height="108" width="119" > <img src="img/color/at.jpg" height="108" width="119" alt="אוניברסיטת תל אביב"> </li>
-            <li> <img class="fadeOut" src="img/bw/fox.jpg" height="108" width="170" > <img src="img/color/fox.jpg" height="108" width="170" alt="Fox"> </li>
+            <li> <img class="fadeOut" src="img/bw/holon.jpg" height="108" width="139"> <img src="img/color/holon.jpg" height="108" width="139" alt="תיאטרון חולון"> </li>
+            <li> <img class="fadeOut" src="img/bw/park.jpg" height="108" width="129"> <img src="img/color/park.jpg" height="108" width="129" alt="פארק מיני ישראל"> </li>
+            <li> <img class="fadeOut" src="img/bw/roladin.jpg" height="108" width="126"> <img src="img/color/roladin.jpg" height="108" width="126" alt="רולדין"> </li>
+            <li> <img class="fadeOut" src="img/bw/technion.jpg" height="108" width="110"> <img src="img/color/technion.jpg" height="108" width="110" alt="הטכניון"> </li>
+            <li> <img class="fadeOut" src="img/bw/teva.jpg" height="108" width="182"> <img src="img/color/teva.jpg" height="108" width="182" alt="טבע"> </li>
+            <li> <img class="fadeOut" src="img/bw/at.jpg" height="108" width="119"> <img src="img/color/at.jpg" height="108" width="119" alt="אוניברסיטת תל אביב"> </li>
+            <li> <img class="fadeOut" src="img/bw/fox.jpg" height="108" width="170"> <img src="img/color/fox.jpg" height="108" width="170" alt="Fox"> </li>
         </ul>
-        <ul class="clients-showcase">
-            <li> <img class="fadeOut" src="img/bw/royalty.jpg" height="108" width="197" > <img height="108" width="197" alt="Royalty" src="img/color/royalty.jpg"> </li>
-            <li> <img class="fadeOut" src="img/bw/home-center.jpg" height="108" width="189" > <img height="108" width="189" alt="Home Center" src="img/color/home-center.jpg"> </li>
-            <li> <img class="fadeOut" src="img/bw/laline.jpg" height="108" width="118" > <img height="108" width="118" alt="Laline" src="img/color/laline.jpg"> </li>
-            <li> <img class="fadeOut" src="img/bw/ace.jpg" height="108" width="170" > <img height="108" width="170" alt="Ace" src="img/color/ace.jpg"> </li>
-            <li> <img class="fadeOut" src="img/bw/celio.jpg" height="108" width="182" > <img height="108" width="182" alt="Celio Fashion" src="img/color/celio.jpg"> </li>
-            <li> <img class="fadeOut" src="img/bw/gsk.jpg" height="108" width="119" > <img height="108" width="119" alt="gsk" src="img/color/gsk.jpg"> </li>
+        <ul class="clients-showcase third">
+            <li> <img class="fadeOut" src="img/bw/royalty.jpg" height="108" width="197"> <img height="108" width="197" alt="Royalty" src="img/color/royalty.jpg"> </li>
+            <li> <img class="fadeOut" src="img/bw/home-center.jpg" height="108" width="189"> <img height="108" width="189" alt="Home Center" src="img/color/home-center.jpg"> </li>
+            <li> <img class="fadeOut" src="img/bw/laline.jpg" height="108" width="118"> <img height="108" width="118" alt="Laline" src="img/color/laline.jpg"> </li>
+            <li> <img class="fadeOut" src="img/bw/ace.jpg" height="108" width="170"> <img height="108" width="170" alt="Ace" src="img/color/ace.jpg"> </li>
+            <li> <img class="fadeOut" src="img/bw/celio.jpg" height="108" width="182"> <img height="108" width="182" alt="Celio Fashion" src="img/color/celio.jpg"> </li>
+            <li> <img class="fadeOut" src="img/bw/gsk.jpg" height="108" width="119"> <img height="108" width="119" alt="gsk" src="img/color/gsk.jpg"> </li>
         </ul>
         <ul class=" clients-showcase">
-            <li> <img class="fadeOut" src="img/bw/electra.jpg" height="108" width="258" > <img height="108" width="258" alt="אלקטרה" src="img/color/electra.jpg"> </li>
-            <li> <img class="fadeOut" src="img/bw/tennis.jpg" height="108" width="146" > <img height="108" width="146" alt="המרכז לטניס בישראל" src="img/color/tennis.jpg"> </li>
-            <li> <img class="fadeOut" src="img/bw/mega-sport.jpg" height="108" width="262" > <img height="108" width="262" alt="מגה ספורט" src="img/color/mega-sport.jpg"> </li>
-            <li> <img class="fadeOut" src="img/bw/shanti.jpg" height="108" width="129" > <img height="108" width="129" alt="בית השאנטי" src="img/color/shanti.jpg"> </li>
-            <li> <img class="fadeOut" src="img/bw/ahava.jpg" height="108" width="180" > <img height="108" width="180" alt="אהבה" src="img/color/ahava.jpg"> </li>
+            <li> <img class="fadeOut" src="img/bw/electra.jpg" height="108" width="258"> <img height="108" width="258" alt="אלקטרה" src="img/color/electra.jpg"> </li>
+            <li> <img class="fadeOut" src="img/bw/tennis.jpg" height="108" width="146"> <img height="108" width="146" alt="המרכז לטניס בישראל" src="img/color/tennis.jpg"> </li>
+            <li> <img class="fadeOut" src="img/bw/mega-sport.jpg" height="108" width="262"> <img height="108" width="262" alt="מגה ספורט" src="img/color/mega-sport.jpg"> </li>
+            <li> <img class="fadeOut" src="img/bw/shanti.jpg" height="108" width="129"> <img height="108" width="129" alt="בית השאנטי" src="img/color/shanti.jpg"> </li>
+            <li> <img class="fadeOut" src="img/bw/ahava.jpg" height="108" width="180"> <img height="108" width="180" alt="אהבה" src="img/color/ahava.jpg"> </li>
         </ul>
     </section>
     <section id="contact" class="contact">
         <h2 class="contact-header">CONTACT</h2>
-        <form class="contact-form" method="post" name="emailform" action="php/form-to-email.php"> <span class="input input--kohana"> <input class="input__field input__field--kohana" type="text" id="input-email"/> <label class="input__label input__label--kohana" for="input-email"> <span class="icon-envelope-o ico icon--kohana"></span> <span class="input__label-content input__label-content--kohana">כתובת מייל</span> </label>
+        <form class="contact-form" method="post" name="emailform" action="php/form-to-email.php"> <span class="input input--kohana"> <input class="input__field input__field--kohana" type="text" id="input-email"/> <label class="input__label input__label--kohana" for="input-email"> <span class="icon-phone ico icon--kohana"></span> <span class="input__label-content input__label-content--kohana">מספר טלפון</span> </label>
             </span>
             <input class="input__submit" type="submit" value="שלח" />
             <p>אנחנו נחזור אליכם</p>
@@ -312,12 +320,13 @@
         <br>
         <div class="contact-box contact-info">
             <div class="left">
-                <p>תומר זילברשטיין</p><br>
+                <p>תומר זילברשטיין</p>
+                <br>
                 <p>עינת הולנדר</p>
             </div>
             <div class="right">
-                <p type="tel">0547 - 3146081</p>
-                <p type="tel">+972 - 547 - 3146081</p>
+                <a href="tel:052-2474747">474747 - 0522</a>
+                <a href="tel:052-3653979">653979 - 0523</a>
             </div>
         </div>
         <div class="contact-sharing clearfix">
@@ -351,34 +360,34 @@
     <script type="text/javascript" src="js/nprogress.js"></script>
 
     <script type="text/javascript" src="js/app.js"></script>
-<script>
-
+    <script>
     // Show the progress bar 
     NProgress.start();
 
     // Increase randomly
-    var interval = setInterval(function() { NProgress.inc(); }, 1000);        
+    var interval = setInterval(function() {
+        NProgress.inc();
+    }, 1000);
     $('.main-header').hide();
     $('.scroll-down').hide();
     // Trigger finish when page fully loaded
-    $(window).load(function () {
+    $(window).load(function() {
         clearInterval(interval);
         NProgress.done();
-        if(NProgress.done()){
-            $('#preloader').hide(10);
-            $('.main-header').show(1000);
-            $('.scroll-down').show(1000);
-            $('#nprogress').hide(10);
+        if (NProgress.done()) {
+            $('#preloader').hide();
+            $('.main-header').show();
+            $('.scroll-down').show();
+            $('#nprogress').hide();
             $('body').css('overflow-y', 'scroll');
         }
     });
 
     // Trigger bar when exiting the page
-    $(window).unload(function () {
+    $(window).unload(function() {
         NProgress.start();
     });
-
-</script>
+    </script>
 </body>
 
 </html>

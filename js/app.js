@@ -235,7 +235,7 @@
                 stored[key] = [];
                 for (var i = 0; i < +data[key].images; i++) {
                     if (key !== 'path') {
-                        items[key].push("<div id='" + key + "-" + (i + 1) + "' class='overlay'><a class='close' href='#page'><span class='icon-close'></span></a><a href='#" + key + "-" + prevImage(i, data[key].images) + "' class='prev'><span class='icon-angle-left2'></span></a><a href='#" + key + "-" + (nextImage(i, data[key].images)) + "' class='next'><span class='icon-angle-right2'></span></a><a href='#" + key + "-" + (nextImage(i, data[key].images)) + "' class='image-holder'><img src='" + data.path + "" + key + "/" + (i + 1) + ".jpg' alt='" + data[key].alt + "'/></a></div>");
+                        items[key].push("<div id='" + key + "-" + (i + 1) + "' class='overlay'><a class='close' href='#page'><span class='icon-close-x'></span></a><a href='#" + key + "-" + prevImage(i, data[key].images) + "' class='prev'><span class='icon-angle-left2'></span></a><a href='#" + key + "-" + (nextImage(i, data[key].images)) + "' class='next'><span class='icon-angle-right2'></span></a><a href='#" + key + "-" + (nextImage(i, data[key].images)) + "' class='image-holder'><img src='" + data.path + "" + key + "/" + (i + 1) + ".jpg' alt='" + data[key].alt + "'/></a></div>");
                     }
                 }
                 stored[key].push([items[key].join("")]);
@@ -256,7 +256,7 @@
             });
             $('section#gallery').css('z-index', '999');
         }
-        if ($target.hasClass('overlay') || $target.hasClass('icon-close')) {
+        if ($target.hasClass('overlay') || $target.hasClass('icon-close-x')) {
             $.each($('section'), function(key, val) {
                 $('section').eq(key).css('z-index', zSplit[key]);
             });
