@@ -1899,7 +1899,9 @@ input[type=text]:focus:not([readonly]) {
             padding: 35px 40%;
         line-height: 70px;
     }
-
+	ul#small-menu a:hover, ul#small-menu a:active, ul#small-menu a:focus{
+	color: #91CDEA;
+}
     ul#small-menu:target {
         display: block;
         width: 100%;
@@ -1943,9 +1945,13 @@ input[type=text]:focus:not([readonly]) {
         height: 94px;
         border-radius: 94px;
     }
+    ul.circles li{
+    	  height: 240px;
+    }
     ul.circles li > .circle-info {
         line-height: 1.25em;
         margin: 2.5px auto 0;
+        top: 130px;
     }
     .circles p {
         font-size: 0.9em;
@@ -1954,6 +1960,7 @@ input[type=text]:focus:not([readonly]) {
         display: none;
     }
     .signature {
+    	display: none;
         top: 60px;
         left: -45px;
     }
