@@ -32,8 +32,8 @@
             halfVH.css('height', window.innerHeight / 2 + "px");
             if (window.innerWidth === 320) {
                 heroHeader.css({
-                    'font-size': window.innerWidth / 18 + 'px',
-                    'line-height': window.innerWidth / 14 + 'px'
+                    'font-size': window.innerWidth / 12.5 + 'px',
+                    'line-height': window.innerWidth / 9 + 'px'
                 });
             } else {
                 heroHeader.css({
