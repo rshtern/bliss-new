@@ -21,9 +21,9 @@ if(IsInjected($visitor_email))
     exit;
 }
 
-$email_from = /*'sales@.blissprod.co.il'*/;//<== update the email address
-$email_subject = "New Bliss submission";
-$email_body = "You have received a new message from $visitor_email.";
+$email_from = "rshtern@walla.co.il";//<== update the email address
+$email_subject = "דואר חדש מאתר בליס עסקים";
+$email_body = "התקבלה הודעה חדשה מטלפון:.";
     
 $to = /*"sales@.blissprod.co.il"*/;//<== update the email address
 $headers = "From: $email_from \r\n";

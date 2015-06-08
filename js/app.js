@@ -92,15 +92,15 @@
     // }
     // fixPNGs();
 
-    $(window).resize(function() {
-        viewport = {
-            height: $(window).height(),
-            width: $(window).width()
-        };
-        safariCheck();
-        servicesCol.eq(1).css('height', setColHeight + 'px');
-        servicesCol.eq(2).css('height', setColHeight + 'px');
-    });
+    // $(window).resize(function() {
+    //     viewport = {
+    //         height: $(window).height(),
+    //         width: $(window).width()
+    //     };
+    //     safariCheck();
+    //     servicesCol.eq(1).css('height', setColHeight + 'px');
+    //     servicesCol.eq(2).css('height', setColHeight + 'px');
+    // });
 
     //smoothscroll
     $('nav li > a[href^="#"]').on('click', function(e) {
@@ -254,8 +254,17 @@
         });
     };
     imageGallery();
+    var galleryPictures = $('#gallery figure');
+    function galleryFocus(){
+        if(319<window.innerWidth<570){
+            $.each(galleryPictures, function(key, val){
+                console.log( galleryPictures.eq(key).offset() );
+                console.log(window.pageYOffset);
+            });
 
-
+        }
+    }
+    galleryFocus();
     $('section').on('click', function(e) {
         var $target = $(e.target);
 
@@ -301,4 +310,38 @@
         });
     }
     responsiveMenu();
+   // -------------------------------------------------
+var elements = $('figure'), // the object we are checking
+    viewportHeight = document.documentElement.clientHeight,  
+    midfunc = function(e){
+        var middleElement;
+      
+        if( e && e.type == 'resize' ){
+            viewportHeight = docElm.clientHeight;
+        }
+        elements.each(function(){
+            var pos = this.getBoundingClientRect().top;
+            // if an element is more or less in the middle of the viewport
+          // אם גדול משליש אבל קטן מחצי
+            if( pos > viewportHeight/3 && pos < viewportHeight/2 ){
+              console.log(pos + " : " + viewportHeight/3 + " : " + viewportHeight/2);
+                middleElement = this;
+              if(!$(middleElement).hasClass('hover')){
+                $(middleElement).addClass('hover');
+              }             
+                return false; // stop iteration 
+            }
+           if ( (this.getBoundingClientRect().top > 500) || (this.getBoundingClientRect().bottom < 375) ){
+             $(this).removeClass('hover');
+              }
+        });
+
+        //console.log(middleElement.textContent);
+        
+    };
+
+if (viewport.width < 571){
+    $(window).on('scroll resize', midfunc);
+} 
+
 }());

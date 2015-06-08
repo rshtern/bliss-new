@@ -445,8 +445,9 @@ h2.about-header > em, h2.services-header > em, h2.clients-header > em {
 .about-right p {
     font-size: 1em;
     line-height: 1.5em;
-    max-width: 765px;
+    /*max-width: 765px;*/
     margin: 0 auto;
+    letter-spacing: -0.5px;
 }
 .about-right p em {
     /*font-size: 1.25em;*/
@@ -502,6 +503,7 @@ ul.circles {
     font-size: 1em;
     line-height: 1.25em;
     margin: 0;
+    letter-spacing: -0.5px;
 }
 .contact-box input, .contact-box label, .contact-box h3 {
     font-family: 'Open Sans Hebrew', Ariel, sans-serif;
@@ -1388,7 +1390,15 @@ img.fadeOut:hover {
     text-align: center;
     z-index: 9;
     padding: 5% 0;
-    background: #f5f5f5;
+    background: #f5f5f5; /* Old browsers */
+background: -moz-linear-gradient(top,  #f5f5f5 0%, #f5f5f5 50%, #ffffff 50%, #ffffff 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f5f5f5), color-stop(50%,#f5f5f5), color-stop(50%,#ffffff), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #f5f5f5 0%,#f5f5f5 50%,#ffffff 50%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #f5f5f5 0%,#f5f5f5 50%,#ffffff 50%,#ffffff 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #f5f5f5 0%,#f5f5f5 50%,#ffffff 50%,#ffffff 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #f5f5f5 0%,#f5f5f5 50%,#ffffff 50%,#ffffff 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f5f5f5', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
 }
 /* Common style */
 
@@ -1401,7 +1411,7 @@ img.fadeOut:hover {
     text-align: center;
     cursor: pointer;
     display: block;
-    margin: 0;
+    margin: -1px 0;
     padding: 0;
 }
 .gallery figure img {
@@ -1484,7 +1494,6 @@ figure.effect-roxy figcaption::before {
     content: '';
     opacity: 0;
     /*box-shadow: -1px 2px 2px rgba(33, 33, 33, 1);*/
-    
     -webkit-transition: opacity 1s, -webkit-transform 1s;
     transition: opacity 1s, transform 1s;
     -webkit-transform: scale(1.025);
@@ -1519,12 +1528,14 @@ figure.effect-roxy p {
     -webkit-transform: translate3d(0, -5px, 0);
     transform: translate3d(0, -5px, 0);
 }
-figure.effect-roxy:hover img.thumb {
+figure.effect-roxy:hover img.thumb, figure.effect-roxy.active img.thumb, figure.effect-roxy.hover img.thumb {
     opacity: 0;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
 }
-figure.effect-roxy:hover figcaption::before, figure.effect-roxy:hover p, figure.effect-roxy:hover h2 {
+figure.effect-roxy:hover figcaption::before, figure.effect-roxy:hover p, figure.effect-roxy:hover h2, figure.effect-roxy.active p, figure.effect-roxy.active h2,
+figure.effect-roxy.hover figcaption::before, figure.effect-roxy.hover p, figure.effect-roxy.hover h2
+ {
     opacity: 1;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -2076,7 +2087,7 @@ input[type=text]:focus:not([readonly]) {
         width: 288px;
     }
     .contact-box {
-        max-width: 320px;
+        max-width: 288px;
     }
     .input {
         width: auto;
@@ -2644,7 +2655,7 @@ section.clients{
     }
     .gallery figure {
         width: 50%;
-        height: 50%;
+        /*height: 50%;*/
     }
     figure.effect-roxy h2 {
         font-size: 60px;
@@ -2678,5 +2689,8 @@ section.clients{
     figure.effect-roxy h2 {
         font-size: 2.325em;
         padding: 10% 0 10px 0;
+    }
+    section.about{
+        height: 1075px;
     }
 }
