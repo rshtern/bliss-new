@@ -285,14 +285,14 @@ var elements = $('figure'), // the object we are checking
         var middleElement;
       
         if( e && e.type == 'resize' ){
-            viewportHeight = docElm.clientHeight;
+            viewportHeight = window.innerHeight || document.body.clientHeight;
         }
         elements.each(function(){
             var pos = this.getBoundingClientRect().top;
             // if an element is more or less in the middle of the viewport
           // אם גדול משליש אבל קטן מחצי
-            if( pos > viewportHeight/3 && pos < viewportHeight/2 ){
-              console.log(pos + " : " + viewportHeight/2 + " : " + viewportHeight/1.5);
+            if( pos > viewportHeight/2 && pos < viewportHeight/1.5 ){
+              console.log(pos + " : " + viewportHeight/3 + " : " + viewportHeight/2);
                 middleElement = this;
               if(!$(middleElement).hasClass('hover')){
                 $(middleElement).addClass('hover');
