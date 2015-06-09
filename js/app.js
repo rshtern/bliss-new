@@ -300,7 +300,7 @@ var elements = $('figure'), // the object we are checking
               }             
                 return false; // stop iteration 
             }
-           if ( (this.getBoundingClientRect().top > 500) || (this.getBoundingClientRect().bottom < 375) ){
+           if ( (this.getBoundingClientRect().top > viewportHeight-100) || (this.getBoundingClientRect().bottom < 100) ){
              $(this).removeClass('hover');
               }
         });
