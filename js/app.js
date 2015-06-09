@@ -291,15 +291,16 @@ var elements = $('figure'), // the object we are checking
             var pos = this.getBoundingClientRect().top;
             // if an element is more or less in the middle of the viewport
           // אם גדול משליש אבל קטן מחצי
-            if( pos > viewportHeight/2 && pos < viewportHeight/1.5 ){
-              console.log(pos + " : " + viewportHeight/3 + " : " + viewportHeight/2);
+            if( pos > viewportHeight/3 && pos < viewportHeight/2 ){
+              //console.log(pos + " : " + viewportHeight/3 + " : " + viewportHeight/2);
                 middleElement = this;
               if(!$(middleElement).hasClass('hover')){
                 $(middleElement).addClass('hover');
+                alert('working');
               }             
                 return false; // stop iteration 
             }
-           if ( (this.getBoundingClientRect().top > 550) || (this.getBoundingClientRect().bottom < 375) ){
+           if ( (this.getBoundingClientRect().top > 500) || (this.getBoundingClientRect().bottom < 375) ){
              $(this).removeClass('hover');
               }
         });
