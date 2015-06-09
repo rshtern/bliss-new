@@ -278,14 +278,14 @@
 
 
    // -------------------------------------------------
-
+var some = $( window ).height();
 var elements = $('figure'), // the object we are checking
-    viewportHeight = window.innerHeight || document.body.clientHeight || $(document).height(),  
+    viewportHeight = some; //window.innerHeight || document.body.clientHeight || $(document).height(),  
     midfunc = function(e){
         var middleElement;
       
         if( e && e.type == 'resize' ){
-            viewportHeight = window.innerHeight || document.body.clientHeight || $(document).height();
+            viewportHeight = $( window ).height(); //window.innerHeight || document.body.clientHeight || $(document).height();
         }
         elements.each(function(){
             var pos = this.getBoundingClientRect().top;
