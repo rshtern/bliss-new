@@ -292,7 +292,7 @@ var elements = $('figure'), // the object we are checking
             // if an element is more or less in the middle of the viewport
           // אם גדול משליש אבל קטן מחצי
             if( pos > viewportHeight/3 && pos < viewportHeight/2 ){
-              console.log(pos + " : " + viewportHeight/3 + " : " + viewportHeight/2);
+              console.log(pos + " : " + viewportHeight/2 + " : " + viewportHeight/1.5);
                 middleElement = this;
               if(!$(middleElement).hasClass('hover')){
                 $(middleElement).addClass('hover');
