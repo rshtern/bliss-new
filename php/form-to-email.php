@@ -21,7 +21,7 @@ if(IsInjected($visitor_email))
     exit;
 }
 
-$email_from = "rshtern@walla.co.il";//<== update the email address
+$email_from = "yotama@gmail.com";//<== update the email address
 $email_subject = "דואר חדש מאתר בליס עסקים";
 $email_body = "התקבלה הודעה חדשה מטלפון:.";
     

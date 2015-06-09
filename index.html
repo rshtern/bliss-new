@@ -312,11 +312,13 @@
     </section>
     <section id="contact" class="contact">
         <h2 class="contact-header">CONTACT</h2>
-        <form class="contact-form" method="post" name="emailform" action="php/form-to-email.php"> <span class="input input--kohana"> <input class="input__field input__field--kohana" type="text" id="input-email"/> <label class="input__label input__label--kohana" for="input-email"> <span class="icon-phone ico icon--kohana"></span> <span class="input__label-content input__label-content--kohana">מספר טלפון</span> </label>
+        <form class="contact-form" method="post" name="emailform" action="php/form-to-email.php">
+            <span class="input input--kohana"> <input class="input__field input__field--kohana" type="text" id="input-email"/> <label class="input__label input__label--kohana" for="input-email"> <span class="icon-phone ico icon--kohana"></span> <span class="input__label-content input__label-content--kohana">מספר טלפון</span> </label>
             </span>
-            <input class="input__submit" type="submit" value="שלח" />
+            <input id="submit" class="input__submit" type="submit" value="שלח" />
             <p>אנחנו נחזור אליכם</p>
         </form>
+        <div class="greet hide"><h3><span class="icon-heart"></span> בקשתכם נשלחה, תודה.</h3></div>
         <br>
         <div class="contact-box contact-info">
             <div class="left">

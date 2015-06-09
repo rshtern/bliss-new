@@ -44,12 +44,7 @@
             }
         } else {
             fullVH.css('height', viewport.height + 'px');
-            // fullVH.css('width', viewport.width + 'px');
-            // fullVW.css('width', viewport.width + 'px');
-            //fullVHContact.css('height', viewport.height - 100 + 'px');
-            // fullVHContact.css('width', viewport.width + 'px');
             halfVH.css('height', viewport.height / 2 + 'px');
-            // halfVH.css('width', viewport.width + 'px');
             
             if (viewport.width < 571) {
                 heroHeader.css({
@@ -67,40 +62,10 @@
         }
     };
     safariCheck();
-    // heroSection.css('display', 'table');
     var servicesCol = $('.services-row>.col.s4'),
         setColHeight = servicesCol.eq(0).height();
     servicesCol.eq(1).css('height', setColHeight + 'px');
     servicesCol.eq(2).css('height', setColHeight + 'px');
-
-    // PNG SUPPORT FOR IE7-8
-    // 
-
-    // function fixPNGs() {
-    //     if (isIE) {
-    //         var i;
-    //         //alert(document.images.length);
-    //         for (i in document.images) {
-    //             if (document.images[i].src) {
-    //                 var imgSrc = document.images[i].src;
-    //                 if (imgSrc.substr(imgSrc.length - 4) === '.png' || imgSrc.substr(imgSrc.length - 4) === '.PNG') {
-    //                     document.images[i].style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled='true',sizingMethod='crop',src='" + imgSrc + "')";
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }
-    // fixPNGs();
-
-    // $(window).resize(function() {
-    //     viewport = {
-    //         height: $(window).height(),
-    //         width: $(window).width()
-    //     };
-    //     safariCheck();
-    //     servicesCol.eq(1).css('height', setColHeight + 'px');
-    //     servicesCol.eq(2).css('height', setColHeight + 'px');
-    // });
 
     //smoothscroll
     $('nav li > a[href^="#"]').on('click', function(e) {
@@ -310,7 +275,10 @@
         });
     }
     responsiveMenu();
+
+
    // -------------------------------------------------
+
 var elements = $('figure'), // the object we are checking
     viewportHeight = document.documentElement.clientHeight,  
     midfunc = function(e){
@@ -331,17 +299,38 @@ var elements = $('figure'), // the object we are checking
               }             
                 return false; // stop iteration 
             }
-           if ( (this.getBoundingClientRect().top > 500) || (this.getBoundingClientRect().bottom < 375) ){
+           if ( (this.getBoundingClientRect().top > 550) || (this.getBoundingClientRect().bottom < 375) ){
              $(this).removeClass('hover');
               }
         });
-
-        //console.log(middleElement.textContent);
         
     };
 
 if (viewport.width < 571){
     $(window).on('scroll resize', midfunc);
 } 
+
+  var form = $('form'); // contact form
+  var submit = $('#submit');  // submit button
+  var greet = $('.greet'); // greet div for show greet message
+
+  // form submit actions
+  form.on('submit', function(e) {
+    e.preventDefault(); // prevent default form submit
+
+    $.ajax({
+      url: 'php/form-to-email.php', // form action url
+      type: 'POST', // form submit method get/post
+      dataType: 'html', // request type html/json/xml
+      //data: form.serialize(), // serialize form data 
+      success: function(data) {
+        greet.removeClass('hide'); // fade in response data
+        form.hide(500);
+      },
+      error: function(e) {
+        console.log("something went wrong: "+ e);
+      }
+    });
+  });
 
 }());

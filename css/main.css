@@ -1643,6 +1643,7 @@ form.contact-form {
     width: 620px;
     height: 85px;
     display: block;
+    /*display: none;*/
     margin: 0 auto 1.5em;
     position: relative;
 }
@@ -1809,6 +1810,31 @@ input[type=text]:focus:not([readonly]) {
     -moz-transition: -moz-transform 0.4s, all 0.4s;
     transition: transform 0.4s, all 0.4s;
 }
+
+.greet{
+  width: 620px;
+  height: 65px;
+  display: block;
+  margin: 0 auto 1.5em;
+  position: relative;
+  background: #015847;
+  color: #fff;
+  text-align: center;
+  line-height: 65px;
+  top: 0;
+  left: auto;
+  right: auto;
+  letter-spacing: 1.25px;
+  font-size: 1.25em;
+  font-weight: 200;
+}
+.greet h3 span{
+   font-size: 1.75em; 
+   color: #ee5f5f;
+   position: relative; 
+   top: 7px;
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 
 @media only screen and (min-width: 320px) and (max-width: 479px) {
@@ -2083,7 +2109,7 @@ input[type=text]:focus:not([readonly]) {
   top: 16px;
   line-height: 35px;
 }
-    form.contact-form {
+    form.contact-form, .greet {
         width: 288px;
     }
     .contact-box {
@@ -2389,7 +2415,7 @@ input[type=text]:focus:not([readonly]) {
     section.contact {
         min-height: 570px;
     }
-    form.contact-form {
+    form.contact-form, .greet {
         width: 375px;
     }
     .contact-box {
@@ -2522,9 +2548,23 @@ section.clients{
         letter-spacing: 1px;
         margin-top: 25%;
     }
+    .next, .prev {
+        top: auto;
+        bottom: 1%;
+        font-size: 3em;
+    }
+    .close {
+        top: 7%;
+        /*bottom: 0.5%;*/
+        font-size: 3em;
+        left: 13%;
+        text-align: center;
+        transform: translate3d(-50%, 0, 0);
+        -webkit-transform: translate3d(-50%, 0, 0);
+    }
     .gallery figure {
         width: 50%;
-        height: 50%;
+        /*height: 50%;*/
     }
     figure.effect-roxy h2 {
         font-size: 40px;
@@ -2538,7 +2578,7 @@ section.clients{
     section.contact {
         min-height: 570px;
     }
-    form.contact-form {
+    form.contact-form, .greet {
         width: 500px;
     }
     .contact-box {
@@ -2652,6 +2692,18 @@ section.clients{
     }
     section.gallery {
         min-height: 800px;
+    }
+    .next, .prev {
+        top: auto;
+        bottom: 1%;
+    }
+    .close {
+        top: auto;
+        bottom: 1.5%;
+        left: 50%;
+        text-align: center;
+        transform: translate3d(-50%, 0, 0);
+        -webkit-transform: translate3d(-50%, 0, 0);
     }
     .gallery figure {
         width: 50%;
